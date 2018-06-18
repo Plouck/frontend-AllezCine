@@ -11,6 +11,39 @@
     </head>
     <body>
 
+
+      <div id="ageWrapper">
+  <div id="agePopUp">
+    <h2>Are you at least 18?</h2>
+    <a href="#" id="ageOkay">Yes</a>
+    <a href="#" id="ageBad">No</a>
+  </div>
+</div>
+<script type="text/javascript" src="jquery.cookie.js">
+
+</script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // put the popup at the start of the body
+  $('#ageWrapper').prependTo($('body'));
+
+  // check if the age has already been verified
+  if (($.cookie('age')) !== 'true') { $('#ageWrapper').addClass('ageUnknown'); }
+
+  // if the "yes" button is clicked, add a cookie and hide the popup
+  $('#ageOkay').click(function() {
+    $.cookie('age', 'true', { expires: 1, path: '/' });
+    $('#ageWrapper').removeClass('ageUnknown');
+  });
+
+  // if the "no" button is clicked, take the user elsewhere
+  $('#ageBad').click(function() {
+    window.location.href='https://www.imdb.com/';
+  });
+});
+</script>
+
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
