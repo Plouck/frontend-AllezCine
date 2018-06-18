@@ -2,6 +2,7 @@
     color: #fd403a !important;
 }
 
+<<<<<<< HEAD
 .row{
     margin-right:0;
     margin-left:0;
@@ -140,3 +141,10 @@ ol.carousel-indicators {
     height: 5px !important;
     margin: 10px !important;
 }
+=======
+/* NAVBAR */
+.navbar-brand {
+    font-size: 2em !important;
+    font-weight: bolder!important;
+}
+>>>>>>> a26b451e0f0a2a987753657bfc70e0f29ef1f0c8
