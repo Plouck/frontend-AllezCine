@@ -1,0 +1,142 @@
+.cRouge {
+    color: #fd403a !important;
+}
+
+.row{
+    margin-right:0;
+    margin-left:0;
+}
+
+/* NAVBAR */
+.navbar-brand {
+    font-size: 36px !important;
+    font-weight: bolder!important;
+}
+.navbar-inverse {
+    padding: 10px 20px;
+}
+@media (min-width: 769px) {
+    .navbar-inverse {
+        background: transparent;
+        border-color: transparent !important;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-inverse {
+        background-color: #333333;
+        border-color: black !important;
+    }
+}
+.navbar-inverse a {
+    color: white !important;
+}
+.navbar-inverse .navbar-nav .active a {
+    /* background-color: transparent; */
+    color: #fd403a !important;
+}
+.navbar-inverse li a:hover {
+    background-color: #fd403a !important;
+}
+.navbar-inverse .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle button, .navbar-toggle button:hover {
+    border-color: transparent;
+    /* background-color: transparent; */
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #ffffff;
+    background-color: #fd403a;
+}
+.navbar-nav {
+    font-size: 14px !important;
+}
+a#contact {
+    margin-left: 100px;
+    /* background-color: transparent; */
+}
+a#home {
+    /* background-color: transparent; */
+}
+.dropdown-menu {
+    background:rgba(255,255,255,0.3);
+}
+.dropdown-menu a {
+    color: black !important;
+    font-size: 14px !important;
+    /* background: transparent; */
+}
+.dropdown-menu a:hover {
+    color: white !important;
+}
+.navbar-form input {
+    width: 200px;
+    opacity: 0.5;
+    background-color: black !important;
+    /* border-color: transparent !important; */
+    border-radius: 20px;
+}
+.icon-bar {
+    background-color: #fd403a !important;
+}
+.glyphicon {
+    color: white;
+}
+.input-group button {
+    background-color: none !important;
+    border-color: transparent !important;
+}
+.input-group button:hover {
+    background-color: none !important;
+    border-color: transparent !important;
+}
+.btn.btn-default {
+    background-color: black !important;
+    border-color: transparent !important;
+    border-radius: 20px;
+    opacity: 0.5;
+    margin-left: 0px;
+}
+
+
+/* JUMBOTRON */
+.jumbotron {
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.carousel-caption {
+    width: 100vw;
+    left: 0 !important;
+}
+.carousel-caption h2 {
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.carousel-caption p {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+ol.carousel-indicators {
+    display: flex;
+    justify-content: center;
+}
+.carousel-indicators-carre li {
+    background-color: white !important;
+    width: 35px !important;
+    border-radius: 0px !important;
+    border: none !important;
+    height: 5px !important;
+    margin: 10px !important;
+}
+.carousel-indicators-carre li.active {
+    background-color: #fd403a !important;
+    width: 35px !important;
+    border-radius: 0px !important;
+    border: none !important;
+    height: 5px !important;
+    margin: 10px !important;
+}
