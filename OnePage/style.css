@@ -217,3 +217,129 @@ ol.carousel-indicators {
   margin-top: 10px;
   display: inline-block;
 }
+
+
+@media (max-width: 1570px) {
+
+    .carousel-caption{
+        margin-bottom:10rem;
+    }
+    .carousel-caption h2{
+        font-size:5rem;
+    }
+    .carousel-caption p{
+        font-size: 1.8rem;
+    }
+
+}
+
+
+@media (max-width: 1140px) {
+
+    form.navbar-form{
+        display:none;
+    }
+    .navbar-brand{
+        font-size:1.3em !important;
+        padding-left:7px !important;
+        padding-right:7px !important;
+    }
+    ul.navbar-nav li a{
+        padding-left:10px !important;
+        padding-right:10px !important;
+    }
+    .carousel-caption{
+        margin-bottom:6rem;
+    }
+    .carousel-caption h2{
+        font-size:3.5rem;
+    }
+    .carousel-caption p{
+        font-size: 1.5rem ;
+        letter-spacing:2px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .footer_list_wrapper {
+        flex-direction: column;
+    }
+    .footer_list_wrapper > div{
+        width:100%;
+    }
+    .footer_list_wrapper > div:first-child{
+        margin-left:20px;
+    }
+    .carousel-caption{
+        margin-bottom:3rem;
+    }
+    .carousel-caption h2{
+        font-size:2.1rem;
+        letter-spacing:3px;
+    }
+    .carousel-caption p{
+        font-size: 16px;
+        letter-spacing:2px;
+    }
+}
+
+
+
+@media (max-width: 757px) {
+    .carousel-caption{
+        padding-bottom:10px;
+    }
+    .carousel-caption p{
+        display:none;
+    }
+    .carousel-caption h2{
+        margin-bottom:10px;
+        letter-spacing:2px;
+    }
+    .carousel-caption button{
+        margin-bottom:0;
+    }
+    #myCarousel{
+        margin-top:79px;
+    }
+    .navbar{
+        background-color: rgb(32, 32, 32);
+    }
+    .dropdown-menu li a {
+        color: #fff !important;
+    }
+    form.navbar-form{
+        display:block;
+    }
+}
+
+
+
+@media (max-width: 510px) {
+    .banner-wrapper{
+        display:flex;
+        flex-direction: column;
+    }
+    .banner-button-wrapper{
+        display:flex;
+        justify-content: center;
+    }
+    .container-banner p{
+        display:block;
+        text-align:center;
+    }
+    .container-banner button:first-child{
+        margin-left:45px;
+    }
+
+    .carousel-caption h2{
+        font-size:16px;
+        letter-spacing:1px;
+    }
+    .carousel-caption button{
+       display:none;
+
+   }
+}
