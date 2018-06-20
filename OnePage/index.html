@@ -7,11 +7,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaq.css">
         <title>AllezCiné</title>
     </head>
     <body>
 
         <script type="text/javascript" src="assets/js/videoStop.js"></script>
+        <script type="text/javascript" src="assets/js/wwidth.js"></script>
 
         <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
@@ -48,14 +50,14 @@
                                 <li><a href="#">Sci-Fi</a></li>
                             </ul>
                         </li>
-                    <li><a href="#featuredMovies">FEATURED MOVIES</a></li>
-                    <li><a href="#featuredSeries">FEATURED TV SERIES</a></li>
-                    <li><a href="#shopMovies">MOVIES SHOP</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="#featuredMovies"><span class="feat">FEATURED </span>MOVIES</a></li>
+                    <li><a href="#featuredSeries"><span class="feat">FEATURED </span>TV SERIES</a></li>
+                    <li><a href="#shopMovies"><span class="feat">MOVIES </span>SHOP</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control pull-right" placeholder="Recherche">
+                        <input type="text" class="form-control pull-right" placeholder="Recherche" id="seekBar">
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-default">
                                 <span class="glyphicon glyphicon-search">
@@ -69,6 +71,7 @@
     	</nav>
 
         <header class="jumbotron col-12 col-md-12">
+            <div class="laDivABibi"></div>
             <div class="row">
     			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     				<ol class="carousel-indicators carousel-indicators-carre">
