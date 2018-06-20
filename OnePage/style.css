@@ -11,21 +11,13 @@
 .navbar-brand {
     font-size: 36px !important;
     font-weight: bolder!important;
+    text-shadow: 1px 1px 2px black;
 }
 .navbar-inverse {
     padding: 10px 20px;
-}
-@media (min-width: 769px) {
-    .navbar-inverse {
-        background: transparent;
-        border-color: transparent !important;
-    }
-}
-@media (max-width: 768px) {
-    .navbar-inverse {
-        background-color: #333333;
-        border-color: black !important;
-    }
+    background: transparent;
+    border-color: transparent !important;
+    position: absolute !important;
 }
 .navbar-inverse a {
     color: white !important;
@@ -45,6 +37,9 @@
 }
 .navbar-nav {
     font-size: 14px !important;
+}
+.nodrop {
+    text-shadow: 1px 1px 2px black;
 }
 a#contact {
     margin-left: 100px;
@@ -86,7 +81,9 @@ a#contact {
     opacity: 0.5;
     margin-left: 0px;
 }
-
+#seekBar{
+    width: 100px;
+}
 
 /* JUMBOTRON */
 .jumbotron {
@@ -133,9 +130,11 @@ ol.carousel-indicators {
     margin: 10px !important;
 }
 
+/* FILMS */
 .thumbnail{
     margin: 0px;
     padding: 0px;
+    border-style: none;
 }
 .aleft{
     text-align: left;
@@ -172,10 +171,76 @@ ol.carousel-indicators {
     padding-bottom: 0;
     margin: 0;
 }
-
 .modal-trailer{
     text-align: center;
 }
+
+/* FEAT MOVS */
+.feature-btn-wrapper{
+    display:flex;
+    justify-content: center;
+}
+.feature-btn-wrapper .btn{
+    width:200px;
+}
+.feature_movies > .container{
+    padding:0;
+}
+.feature_movies .thumbnail{
+    padding:0;
+    border:none;
+}
+.feature_movies .thumbnail .caption{
+    padding:0;
+}
+.feature_movies .thumbnail .caption h5{
+    text-align:center;
+}
+.feature_movies .thumbnail .caption p{
+    text-align:center;
+}
+
+
+
+.feature_movies div h3{
+    display:inline;
+}
+.feature_movies_container{
+    padding:0;
+}
+
+
+.feature_movies .filtres{
+    margin-top:25px;
+    padding-left:15px
+}
+.filtres {
+    margin-bottom:10px;
+    padding-left:15px;
+    display:flex;
+    align-content:space-between;
+    flex-wrap:wrap;
+}
+
+.filtres button {
+    border:none;
+    background-color: rgb(146, 146, 146);
+    padding:10px;
+    margin-right:10px;
+    color:white;
+    min-width:80px;
+    margin-bottom:10px;
+}
+.filtres .filtre_active{
+    background-color: #fd403a;
+}
+section h3{
+    border-left :5px #fd403a solid;
+    padding-left:10px;
+    margin-bottom:35px;
+}
+
+
 
 /* pop-up age */
 #ageWrapper {
