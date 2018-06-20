@@ -38,22 +38,22 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">HOME</a></li>
+                    <li class="nodrop"><a href="#">HOME</a></li>
                     <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">GENRE <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Comedy</a></li>
-                                <li><a href="#">Drama</a></li>
-                                <li><a href="#">Adventure</a></li>
-                                <li><a href="#">Thriller</a></li>
-                                <li><a href="#">Sci-Fi</a></li>
-                            </ul>
-                        </li>
-                    <li><a href="#featuredMovies"><span class="feat">FEATURED </span>MOVIES</a></li>
-                    <li><a href="#featuredSeries"><span class="feat">FEATURED </span>TV SERIES</a></li>
-                    <li><a href="#shopMovies"><span class="feat">MOVIES </span>SHOP</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">GENRE <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Comedy</a></li>
+                            <li><a href="#">Drama</a></li>
+                            <li><a href="#">Adventure</a></li>
+                            <li><a href="#">Thriller</a></li>
+                            <li><a href="#">Sci-Fi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nodrop"><a href="#featuredMovies"><span class="feat">FEATURED </span>MOVIES</a></li>
+                    <li class="nodrop"><a href="#featuredSeries"><span class="feat">FEATURED </span>TV SERIES</a></li>
+                    <li class="nodrop"><a href="#shopMovies"><span class="feat">MOVIES </span>SHOP</a></li>
+                    <li class="nodrop"><a href="#contact">CONTACT</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
@@ -125,12 +125,12 @@
     		<div class="container">
     			<div class="row">
                     <div class="col-md-1"></div>
-    				<div class="col-md-2">
+    				<div class="col-md-2 col-sm-4 col-xs-6">
     					<div class="thumbnail">
     						<img src="assets/img/poster_standbyme.jpg" alt="Stand By Me" data-toggle="modal" data-target="#modalStand" class="hover-shadow">
     					</div>
     					<div class="caption-container">
-    				        <p data-toggle="modal" data-target="#modalStand" class="titreFilm">Stand By Me</p>
+    				        <p id="titreFilm" data-toggle="modal" data-target="#modalStand" class="hover-shadow">Stand By Me</p>
                             <div class="row">
                                 <div class="col-md-3 aleft">
                                     <p>1986</p>
@@ -141,12 +141,12 @@
                             </div>
     	      			</div>
     				</div>
-    				<div class="col-md-2">
+    				<div class="col-md-2 col-sm-4 col-xs-6">
     					<div class="thumbnail">
     						<img src="assets/img/poster_lifeofpi.jpg" alt="Life Of Pi" data-toggle="modal" data-target="#modalPi" class="hover-shadow">
     					</div>
     					<div class="caption-container">
-    	        			<p data-toggle="modal" data-target="#modalPi" class="titreFilm">Life Of Pi</p>
+    	        			<p id="titreFilm" data-toggle="modal" data-target="#modalPi" class="hover-shadow">Life Of Pi</p>
                             <div class="row">
                                 <div class="col-md-3 aleft">
                                     <p>2012</p>
@@ -157,12 +157,12 @@
                             </div>
     	     			 </div>
     				</div>
-    				<div class="col-md-2">
+    				<div class="col-md-2 col-sm-4 col-xs-6">
     					<div class="thumbnail">
     						<img src="assets/img/poster_mother.jpg" alt="Mother!" data-toggle="modal" data-target="#modalMother" class="hover-shadow">
     					</div>
     					<div class="caption-container">
-    				        <p data-toggle="modal" data-target="#modalMother" class="titreFilm">Mother!</p>
+    				        <p id="titreFilm" data-toggle="modal" data-target="#modalMother" class="hover-shadow">Mother!</p>
                             <div class="row">
                                 <div class="col-md-3 aleft">
                                     <p>2004</p>
@@ -173,12 +173,12 @@
                             </div>
     				     </div>
     				</div>
-    				<div class="col-md-2">
+    				<div class="col-md-2 col-sm-4 col-xs-6">
     					<div class="thumbnail">
     						<img src="assets/img/poster_borat.jpg" alt="Borat" data-toggle="modal" data-target="#modalBorat" class="hover-shadow">
     					</div>
     				    <div class="caption-container">
-    				        <p data-toggle="modal" data-target="#modalBorat" class="titreFilm">Borat</p>
+    				        <p id="titreFilm" data-toggle="modal" data-target="#modalBorat" class="hover-shadow">Borat</p>
                             <div class="row">
                                 <div class="col-md-3 aleft">
                                     <p>2006</p>
@@ -189,12 +189,12 @@
                             </div>
     				    </div>
     				</div>
-    				<div class="col-md-2">
+    				<div class="col-md-2 col-sm-4 col-xs-6">
     					<div class="thumbnail">
     						<img src="assets/img/poster_therewillbeblood.jpg" alt="There Will Be Blood" data-toggle="modal" data-target="#modalBlood" class="hover-shadow">
     					</div>
     					<div class="caption-container">
-    				        <p data-toggle="modal" data-target="#modalBlood" class="titreFilm">There Will Be Blood</p>
+    				        <p id="titreFilm" data-toggle="modal" data-target="#modalBlood" class="hover-shadow">There Will Be Blood</p>
                             <div class="row">
                                 <div class="col-md-3 aleft">
                                     <p>2007</p>
@@ -210,7 +210,7 @@
     		</div>
     	</section>
 
-        <!-- Modal STAND -->
+        <!-- Modals STAND -->
         <div class="modal fade" id="modalStand" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -231,7 +231,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal PI -->
+        <!-- Modals PI -->
         <div class="modal fade" id="modalPi" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -252,7 +252,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal MOTHER -->
+        <!-- Modals MOTHER -->
         <div class="modal fade" id="modalMother" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -273,7 +273,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal BORAT -->
+        <!-- Modals BORAT -->
         <div class="modal fade" id="modalBorat" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -294,7 +294,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal BLOOD -->
+        <!-- Modals BLOOD -->
         <div class="modal fade" id="modalBlood" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -315,6 +315,312 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+        <br><br>
+        <!-- FEATURED MOVIES -->
+		<section id="featuredMovies" class="feature_movies">
+			<div class="container">
+				<h3>FEATURED MOVIES</h3>
+				<div class= "filtres">
+					<button class="filtre_active" onclick="filterMovAll()">All</button>
+					<button id="showComedy" onclick="filterMovComedy()" >Comedy</button>
+					<button id="showDrama" onclick="filterMovDrama()" >Drama</button>
+					<button id="showAdventure" onclick="filterMovAdventure() ">Adventure</button>
+                    <button id="showThriller" onclick="filterMovThriller() ">Thriller</button>
+                    <button id="showFantasy" onclick="filterMovFantasy() ">Fantasy</button>
+                    <button id="showSciFi" onclick="filterMovSciFi() ">Sci-Fi</button>
+				</div>
+
+				<div class="container feature_movies_container">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3 col-md-2 thriller drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_memento.jpg" alt="">
+								<div class="caption">
+									<h5>Memento</h5>
+									<p>2000</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3 col-md-2 drama thriller">
+							<div class="thumbnail">
+								<img src="assets/img/poster_elly.jpg" alt="">
+								<div class="caption">
+									<h5>Darbareye Elly</h5>
+									<p>2009</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3 col-md-2 scifi thriller">
+							<div class="thumbnail">
+								<img src="assets/img/poster_alien.jpg" alt="">
+								<div class="caption">
+									<h5>Alien</h5>
+									<p>1979</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy">
+							<div class="thumbnail">
+								<img src="assets/img/poster_sunshine.jpg" alt="">
+								<div class="caption">
+									<h5>Little Miss Sunshine</h5>
+									<p>2006</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 thriller scifi">
+							<div class="thumbnail">
+								<img src="assets/img/poster_triangle.jpg" alt="">
+								<div class="caption">
+									<h5>Triangle</h5>
+									<p>2009</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy">
+							<div class="thumbnail">
+								<img src="assets/img/poster_strangelove.jpg" alt="">
+								<div class="caption">
+									<h5>Dr Strangelove</h5>
+									<p>1964</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 adventure thriller drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_revenant.jpg" alt="">
+								<div class="caption">
+									<h5>The Revenant</h5>
+									<p>2015</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 thriller">
+							<div class="thumbnail">
+								<img src="assets/img/poster_reservoir.jpg" alt="">
+								<div class="caption">
+									<h5>Reservoir Dogs</h5>
+									<p>1992</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 fantasy drama thriller">
+							<div class="thumbnail">
+								<img src="assets/img/poster_pan.jpg" alt="">
+								<div class="caption">
+									<h5>Pan's Labyrinth</h5>
+									<p>2006</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 fantasy drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_nobody.jpg" alt="">
+								<div class="caption">
+									<h5>Mr Nobody</h5>
+									<p>2009</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 thriller drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_memories.jpg" alt="">
+								<div class="caption">
+									<h5>Salinui chueok</h5>
+									<p>2003</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 fantasy comedy">
+							<div class="thumbnail">
+								<img src="assets/img/poster_malkovitch.jpg" alt="">
+								<div class="caption">
+									<h5>Being John Malkovitch</h5>
+									<p>1999</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy">
+							<div class="thumbnail">
+								<img src="assets/img/poster_lebowski.jpg" alt="">
+								<div class="caption">
+									<h5>The Big Lebowski</h5>
+									<p>1998</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_lavita.jpg" alt="">
+								<div class="caption">
+									<h5>La Vita E Bella</h5>
+									<p>1997</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_jagten.jpg" alt="">
+								<div class="caption">
+									<h5>Jagten</h5>
+									<p>2012</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy">
+							<div class="thumbnail">
+								<img src="assets/img/poster_groundhog.jpg" alt="">
+								<div class="caption">
+									<h5>Groundhog Day</h5>
+									<p>1993</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 fantasy drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_borat.jpg" alt="">
+								<div class="caption">
+									<h5>Borat</h5>
+									<p>2006</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 thriller scifi">
+							<div class="thumbnail">
+								<img src="assets/img/poster_donnie.jpg" alt="">
+								<div class="caption">
+									<h5>Donnie Darko</h5>
+									<p>2001</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 adventure thriller drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_dasboot.jpg" alt="">
+								<div class="caption">
+									<h5>Das Boot</h5>
+									<p>1981</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 thriller drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_cidade.jpg" alt="">
+								<div class="caption">
+									<h5>Cidade De Deus</h5>
+									<p>2002</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 scifi thriller">
+							<div class="thumbnail">
+								<img src="assets/img/poster_chrono.jpg" alt="">
+								<div class="caption">
+									<h5>Los Cronocrimenes</h5>
+									<p>2007</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_chihiro.jpg" alt="">
+								<div class="caption">
+									<h5>Spirited Away</h5>
+									<p>2001</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_captain.jpg" alt="">
+								<div class="caption">
+									<h5>Captain Fantastic</h5>
+									<p>2016</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 scifi drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_blade.jpg" alt="">
+								<div class="caption">
+									<h5>Blade Runner 2049</h5>
+									<p>2017</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 comedy drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_beauty.jpg" alt="">
+								<div class="caption">
+									<h5>American Beauty</h5>
+									<p>1999</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 scifi fantasy adventure">
+							<div class="thumbnail">
+								<img src="assets/img/poster_avatar.jpg" alt="">
+								<div class="caption">
+									<h5>Avatar</h5>
+									<p>2009</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_therewillbeblood.jpg" alt="">
+								<div class="caption">
+									<h5>There Will Be Blood</h5>
+									<p>2007</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 adventure drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_standbyme.jpg" alt="">
+								<div class="caption">
+									<h5>Stand By Me</h5>
+									<p>1986</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 thriller drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_mother.jpg" alt="">
+								<div class="caption">
+									<h5>Mother!</h5>
+									<p>2017</p>
+								</div>
+							</div>
+						</div>
+                        <div class="col-xs-6 col-sm-3 col-md-2 adventure fantasy drama">
+							<div class="thumbnail">
+								<img src="assets/img/poster_lifeofpi.jpg" alt="">
+								<div class="caption">
+									<h5>Life Of Pi</h5>
+									<p>2012</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="feature-btn-wrapper">
+					<a class="btn btn-primary" id="toggleFeaturesMovies" role="button" onclick="toggleMovies()" >Show more</a>
+				</div>
+			</div>
+
+			</div>
+		</section>
+
+
 
         <br><br>
 
