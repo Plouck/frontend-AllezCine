@@ -1,0 +1,91 @@
+@media(max-width:767px){
+    .navbar-inverse {
+        background-color: #333333;
+        border-color: black !important;
+    }
+    .carousel-caption h2{
+        font-size: 20px;
+    }
+    .carousel-caption p{
+        font-size: 12px;
+        display: none;
+    }
+    .laDivABibi{
+        height: 70px;
+    }
+    .aleft{
+        display: none;
+    }
+    .aright{
+        display: none;
+    }
+    .titreFilm{
+        padding-bottom: 15px;
+    }
+}
+@media(min-width:768px){
+    .feat{
+        display: none;
+    }
+    .carousel-caption h2{
+        font-size: 24px;
+    }
+    .carousel-caption p{
+        font-size: 14px;
+    }
+    .laDivABibi{
+        height: 0px;
+        display: none;
+    }
+    .aleft{
+        display: none;
+    }
+    .aright{
+        display: none;
+    }
+    .titreFilm{
+        padding-bottom: 10px;
+    }
+}
+@media(min-width:992px){
+    .feat{
+        display: none;
+    }
+    .carousel-caption h2{
+        font-size: 30px;
+    }
+    .carousel-caption p{
+        font-size: 16px;
+    }
+    .laDivABibi{
+        height: 0px;
+        display: none;
+    }
+    .aleft{
+        display: block;
+    }
+    .aright{
+        display: block;
+    }
+}
+@media(min-width:1200px){
+    .feat{
+        display: inline;
+    }
+    .carousel-caption h2{
+        font-size: 36px;
+    }
+    .carousel-caption p{
+        font-size: 20px;
+    }
+    .laDivABibi{
+        height: 0px;
+        display: none;
+    }
+    .aleft{
+        display: block;
+    }
+    .aright{
+        display: block;
+    }
+}
