@@ -13,6 +13,15 @@
     .laDivABibi{
         height: 70px;
     }
+    .aleft{
+        display: none;
+    }
+    .aright{
+        display: none;
+    }
+    .titreFilm{
+        padding-bottom: 15px;
+    }
 }
 @media(min-width:768px){
     .feat{
@@ -27,6 +36,15 @@
     .laDivABibi{
         height: 0px;
         display: none;
+    }
+    .aleft{
+        display: none;
+    }
+    .aright{
+        display: none;
+    }
+    .titreFilm{
+        padding-bottom: 10px;
     }
 }
 @media(min-width:992px){
@@ -43,6 +61,12 @@
         height: 0px;
         display: none;
     }
+    .aleft{
+        display: block;
+    }
+    .aright{
+        display: block;
+    }
 }
 @media(min-width:1200px){
     .feat{
@@ -57,5 +81,11 @@
     .laDivABibi{
         height: 0px;
         display: none;
+    }
+    .aleft{
+        display: block;
+    }
+    .aright{
+        display: block;
     }
 }
