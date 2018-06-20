@@ -343,3 +343,31 @@ ol.carousel-indicators {
 
    }
 }
+
+
+/* cookie eu */
+div.cookie_policy_msg{
+  width:100%;
+  background:#111!important;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+div.cookie_policy_msg>div{
+  max-width:1200px;
+  margin:0 auto;
+  color:#999;
+  padding:10px;
+}
+div.cookie_policy_msg>div>a:first-child{
+  color:#fff;
+  display:inline-block;
+  margin-left:10px;
+}
+div.cookie_policy_msg>div>a:last-child{
+  display:inline-block;
+  margin-left:20px;
+  height:28px;
+  width:32px;
+  color:#fff;
+}
