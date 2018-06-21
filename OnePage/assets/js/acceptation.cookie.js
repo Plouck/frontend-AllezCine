@@ -45,8 +45,8 @@ var Cookie_Eu = {
             var div_cookie = document.createElement('div');
             div_cookie.id = 'cookie_policy_msg';
             div_cookie.className = 'cookie_policy_msg';
-            var t = "<div>En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies utilisés pour les publicités et pour les statistiques de visites,";
-            t += '<a href="http://monsite.com/politique-cookie.html">en savoir plus</a><a href="javascript:Cookie_Eu.write(365);">OK</a></div>';
+            var t = "<div>This site uses cookies to improve your experience and show you relevant advertising. By continuing to browse the site you are agreeing to our use of cookies. ";
+            t += '<a href="https://www.theguardian.com/info/cookies">Find out more here.</a><a href="javascript:Cookie_Eu.write(365);">OK</a></div>';
 
             div_cookie.innerHTML = t;
             docbody.insertBefore(div_cookie, docbody.childNodes[0]);

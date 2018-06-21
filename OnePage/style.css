@@ -130,6 +130,12 @@ ol.carousel-indicators {
     margin: 10px !important;
 }
 
+.redBan{
+    height: 37px;
+    width: 100%;
+    background-color: #fd403a;
+}
+
 /* FILMS */
 .thumbnail{
     margin: 0px;
@@ -181,63 +187,66 @@ ol.carousel-indicators {
     justify-content: center;
 }
 .feature-btn-wrapper .btn{
-    width:200px;
+    width: 200px;
 }
 .feature_movies > .container{
-    padding:0;
+    padding: 0;
 }
 .feature_movies .thumbnail{
-    padding:0;
+    padding: 0;
     border:none;
 }
 .feature_movies .thumbnail .caption{
-    padding:0;
+    padding: 0;
 }
 .feature_movies .thumbnail .caption h5{
-    text-align:center;
+    text-align: center;
 }
 .feature_movies .thumbnail .caption p{
-    text-align:center;
+    text-align: center;
 }
-
-
-
 .feature_movies div h3{
-    display:inline;
+    display: inline;
 }
 .feature_movies_container{
-    padding:0;
+    padding: 0;
 }
-
-
 .feature_movies .filtres{
-    margin-top:25px;
-    padding-left:15px
+    margin-top: 25px;
+    padding-left: 15px
 }
 .filtres {
-    margin-bottom:10px;
-    padding-left:15px;
-    display:flex;
-    align-content:space-between;
-    flex-wrap:wrap;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
 }
-
 .filtres button {
     border:none;
     background-color: rgb(146, 146, 146);
-    padding:10px;
-    margin-right:10px;
-    color:white;
-    min-width:80px;
-    margin-bottom:10px;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    min-width: 80px;
+    margin-bottom: 10px;
+}
+#numFeatMovs{
+    border:none;
+    background-color: #fd403a;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    min-width: 80px;
+    margin-bottom: 10px;
 }
 .filtres .filtre_active{
     background-color: #fd403a;
 }
 section h3{
-    border-left :5px #fd403a solid;
-    padding-left:10px;
-    margin-bottom:35px;
+    border-left: 5px #fd403a solid;
+    padding-left: 10px;
+    margin-bottom: 35px;
 }
 
 
