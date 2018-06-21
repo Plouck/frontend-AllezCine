@@ -248,8 +248,51 @@ section h3{
     padding-left: 10px;
     margin-bottom: 35px;
 }
+.feature_movies_container .row > div:nth-last-child(-n + 18){
+    display:none;
+    transition: all 1s ease;
+}
 
-
+/* FEAT SERIES */
+.feature_series > .container{
+    padding: 0;
+}
+.feature_series .thumbnail{
+    padding: 0;
+    border:none;
+}
+.feature_series .thumbnail .caption{
+    padding: 0;
+}
+.feature_series .thumbnail .caption h5{
+    text-align: center;
+}
+.feature_series .thumbnail .caption p{
+    text-align: center;
+}
+.feature_series div h3{
+    display: inline;
+}
+.feature_series_container{
+    padding: 0;
+}
+.feature_series .filtres{
+    margin-top: 25px;
+    padding-left: 15px
+}
+#numFeatSeries{
+    border:none;
+    background-color: #fd403a;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    min-width: 80px;
+    margin-bottom: 10px;
+}
+.feature_series_container .row > div:nth-last-child(-n + 12){
+    display:none;
+    transition: all 1s ease;
+}
 
 /* pop-up age */
 #ageWrapper {
