@@ -35,12 +35,12 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">GENRE <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Comedy</a></li>
-                            <li><a href="#">Drama</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Thriller</a></li>
-                            <li><a href="#">Sci-Fi</a></li>
+                            <li><a href="#featuredMovies" onclick="filterMovComedy()">Comedy</a></li>
+                            <li><a href="#featuredMovies" onclick="filterMovDrama()">Drama</a></li>
+                            <li><a href="#featuredMovies" onclick="filterMovAdventure()">Adventure</a></li>
+                            <li><a href="#featuredMovies" onclick="filterMovThriller()">Thriller</a></li>
+                            <li><a href="#featuredMovies" onclick="filterMovFantasy()">Fantasy</a></li>
+                            <li><a href="#featuredMovies" onclick="filterMovSciFi()">Sci-Fi</a></li>
                         </ul>
                     </li>
                     <li class="nodrop"><a href="#featuredMovies"><span class="feat">FEATURED </span>MOVIES</a></li>
@@ -624,12 +624,12 @@
 				<h3>FEATURED SERIES</h3>
 				<div class= "filtres">
 					<button class="filtre_active" onclick="filterSeriesAll()">All</button>
-					<button id="viewComedy" onclick="filterSeriesComedy()" >Comedy</button>
-					<button id="viewDrama" onclick="filterSeriesDrama()" >Drama</button>
-					<button id="viewAdventure" onclick="filterSeriesAdventure() ">Adventure</button>
-                    <button id="viewThriller" onclick="filterSeriesThriller() ">Thriller</button>
-                    <button id="viewFantasy" onclick="filterSeriesFantasy() ">Fantasy</button>
-                    <button id="viewSciFi" onclick="filterSeriesSciFi() ">Sci-Fi</button>
+					<button id="viewComedy" onclick="filterSeriesComedy()">Comedy</button>
+					<button id="viewDrama" onclick="filterSeriesDrama()">Drama</button>
+					<button id="viewAdventure" onclick="filterSeriesAdventure()">Adventure</button>
+                    <button id="viewThriller" onclick="filterSeriesThriller()">Thriller</button>
+                    <button id="viewFantasy" onclick="filterSeriesFantasy()">Fantasy</button>
+                    <button id="viewSciFi" onclick="filterSeriesSciFi()">Sci-Fi</button>
 				</div>
 
 				<div class="container feature_series_container">
