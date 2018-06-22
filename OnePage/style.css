@@ -1,3 +1,8 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body{
     font-family: Cabin;
 }
@@ -302,6 +307,53 @@ section h3{
 .feature_series_container .row > div:nth-last-child(-n + 12){
     display:none;
     transition: all 1s ease;
+}
+
+/* MOVIE SHOP */
+#shopCarousel .detail{
+    margin: 0;
+    padding: 0;
+}
+#shopCarousel .thumbs{
+    margin: 0;
+    padding: 0;
+}
+.pouce{
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    background-color: #F2F1F6;
+    width: 150px;
+    border-bottom-style: solid;
+    border-bottom-color: #bfbdc4;
+}
+.pouce .row{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+/* .pouce img{
+    width: 100px;
+} */
+#shopCarousel .container-fluid{
+    margin: 0;
+    padding: 0;
+}
+#shopCarousel .carousel-inner{
+    margin: 0;
+    padding: 0;
+}
+#shopCarousel .item{
+    margin: 0;
+    padding: 0;
+}
+#shopCarousel .thumbnail{
+    margin: 0;
+    padding: 0;
+}
+#shopCarousel .caption-container{
+    margin: 0;
+    padding: 0;
 }
 
 /* pop-up age */
