@@ -1,7 +1,9 @@
-.cRouge {
-    color: #fd403a !important;
+body{
+    font-family: Cabin;
 }
-
+.cRouge {
+    color: #DF2620 !important;
+}
 .row{
     margin-right:0;
     margin-left:0;
@@ -23,17 +25,17 @@
     color: white !important;
 }
 .navbar-inverse .navbar-nav .active a {
-    color: #fd403a !important;
+    color: #DF2620 !important;
 }
 .navbar-inverse li a:hover {
-    background-color: #fd403a !important;
+    background-color: #DF2620 !important;
 }
 .navbar-inverse .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle button, .navbar-toggle button:hover {
     border-color: transparent;
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
     color: #ffffff;
-    background-color: #fd403a;
+    background-color: #DF2620;
 }
 .navbar-nav {
     font-size: 14px !important;
@@ -61,7 +63,7 @@ a#contact {
     border-radius: 20px;
 }
 .icon-bar {
-    background-color: #fd403a !important;
+    background-color: #DF2620 !important;
 }
 .glyphicon {
     color: white;
@@ -122,7 +124,7 @@ ol.carousel-indicators {
     margin: 10px !important;
 }
 .carousel-indicators-carre li.active {
-    background-color: #fd403a !important;
+    background-color: #DF2620 !important;
     width: 35px !important;
     border-radius: 0px !important;
     border: none !important;
@@ -133,7 +135,7 @@ ol.carousel-indicators {
 .redBan{
     height: 37px;
     width: 100%;
-    background-color: #fd403a;
+    background-color: #DF2620;
 }
 
 /* FILMS */
@@ -201,9 +203,12 @@ ol.carousel-indicators {
 }
 .feature_movies .thumbnail .caption h5{
     text-align: center;
+    margin: 0;
+    padding-top: 6px;
 }
 .feature_movies .thumbnail .caption p{
     text-align: center;
+    padding-bottom: 6px;
 }
 .feature_movies div h3{
     display: inline;
@@ -223,29 +228,31 @@ ol.carousel-indicators {
     flex-wrap: wrap;
 }
 .filtres button {
-    border:none;
-    background-color: rgb(146, 146, 146);
-    padding: 10px;
-    margin-right: 10px;
+    border: none;
+    background-color: #CBBCBC;
+    padding: 12px;
+    margin-right: 5px;
     color: white;
     min-width: 80px;
     margin-bottom: 10px;
 }
 #numFeatMovs{
     border:none;
-    background-color: #fd403a;
-    padding: 10px;
+    background-color: #DF2620;
+    padding: 8px;
     margin-right: 10px;
     color: white;
     min-width: 80px;
     margin-bottom: 10px;
 }
 .filtres .filtre_active{
-    background-color: #fd403a;
+    background-color: #DF2620;
 }
 section h3{
-    border-left: 5px #fd403a solid;
+    border-left: 5px #DF2620 solid;
     padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
     margin-bottom: 35px;
 }
 .feature_movies_container .row > div:nth-last-child(-n + 18){
@@ -266,6 +273,9 @@ section h3{
 }
 .feature_series .thumbnail .caption h5{
     text-align: center;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 18px;
 }
 .feature_series .thumbnail .caption p{
     text-align: center;
@@ -282,8 +292,8 @@ section h3{
 }
 #numFeatSeries{
     border:none;
-    background-color: #fd403a;
-    padding: 10px;
+    background-color: #DF2620;
+    padding: 8px;
     margin-right: 10px;
     color: white;
     min-width: 80px;

@@ -2,16 +2,12 @@
 $(function() {
     var $button = $('.feature_series .filtres button').click(function() {
       $button.not(this).removeClass('filtre_active');
-      // removing `active` class from images except clicked
       $(this).toggleClass('filtre_active');
-      // toggling class `active` of clicked image
     });
   });
 
 var numFeatSeries = document.getElementById("numFeatSeries");
 var twelveSeries = document.querySelectorAll(".feature_series_container .row > div:nth-last-child(-n + 12)");
-
-// console.log(twelveSeries);
 
 function toggleSeries(){
     if(numFeatSeries.innerHTML === "Show more"){
@@ -35,9 +31,6 @@ var viewAdventure = document.getElementById("viewAdventure");
 var viewSciFi = document.getElementById("viewSciFi");
 var allSeries = document.querySelectorAll(".feature_series_container .row > div");
 
-
-// console.log(allSeries);
-
 function filterSeriesAll(){
     for(var i = 0; i < allSeries.length; i++){
             allSeries[i].style.display = "block";
@@ -50,10 +43,10 @@ function filterSeriesAll(){
 function filterSeriesFantasy(){
     numFeatSeries.style.display = "none";
     for(var i = 0; i < allSeries.length; i++){
-        var filmCat1 = allSeries[i].classList[3];
-        var filmCat2 = allSeries[i].classList[4];
-        var filmCat3 = allSeries[i].classList[5];
-        if (filmCat1 === "Fantasy" || filmCat2 === "Fantasy" || filmCat3 === "Fantasy"){
+        var genre1 = allSeries[i].classList[3];
+        var genre2 = allSeries[i].classList[4];
+        var genre3 = allSeries[i].classList[5];
+        if (genre1 === "Fantasy" || genre2 === "Fantasy" || genre3 === "Fantasy"){
             allSeries[i].style.display = "block";
         }else {
             allSeries[i].style.display = "none";
@@ -64,10 +57,10 @@ function filterSeriesFantasy(){
 function filterSeriesSciFi(){
     numFeatSeries.style.display = "none";
     for(var i = 0; i < allSeries.length; i++){
-        var filmCat1 = allSeries[i].classList[3];
-        var filmCat2 = allSeries[i].classList[4];
-        var filmCat3 = allSeries[i].classList[5];
-        if (filmCat1 === "SciFi" || filmCat2 === "SciFi" || filmCat3 === "SciFi"){
+        var genre1 = allSeries[i].classList[3];
+        var genre2 = allSeries[i].classList[4];
+        var genre3 = allSeries[i].classList[5];
+        if (genre1 === "SciFi" || genre2 === "SciFi" || genre3 === "SciFi"){
             allSeries[i].style.display = "block";
         }else {
             allSeries[i].style.display = "none";
@@ -78,10 +71,10 @@ function filterSeriesSciFi(){
 function filterSeriesDrama(){
     numFeatSeries.style.display = "none";
     for(var i = 0; i < allSeries.length; i++){
-        var filmCat1 = allSeries[i].classList[3];
-        var filmCat2 = allSeries[i].classList[4];
-        var filmCat3 = allSeries[i].classList[5];
-        if (filmCat1 === "Drama" || filmCat2 === "Drama" || filmCat3 === "Drama"){
+        var genre1 = allSeries[i].classList[3];
+        var genre2 = allSeries[i].classList[4];
+        var genre3 = allSeries[i].classList[5];
+        if (genre1 === "Drama" || genre2 === "Drama" || genre3 === "Drama"){
             allSeries[i].style.display = "block";
         }else {
             allSeries[i].style.display = "none";
@@ -92,10 +85,10 @@ function filterSeriesDrama(){
 function filterSeriesComedy(){
     numFeatSeries.style.display = "none";
     for(var i = 0; i < allSeries.length; i++){
-        var filmCat1 = allSeries[i].classList[3];
-        var filmCat2 = allSeries[i].classList[4];
-        var filmCat3 = allSeries[i].classList[5];
-        if (filmCat1 === "Comedy" || filmCat2 === "Comedy" || filmCat3 === "Comedy"){
+        var genre1 = allSeries[i].classList[3];
+        var genre2 = allSeries[i].classList[4];
+        var genre3 = allSeries[i].classList[5];
+        if (genre1 === "Comedy" || genre2 === "Comedy" || genre3 === "Comedy"){
             allSeries[i].style.display = "block";
         }else {
             allSeries[i].style.display = "none";
@@ -106,10 +99,10 @@ function filterSeriesComedy(){
 function filterSeriesAdventure(){
     numFeatSeries.style.display = "none";
     for(var i = 0; i < allSeries.length; i++){
-        var filmCat1 = allSeries[i].classList[3];
-        var filmCat2 = allSeries[i].classList[4];
-        var filmCat3 = allSeries[i].classList[5];
-        if (filmCat1 === "Adventure" || filmCat2 === "Adventure" || filmCat3 === "Adventure"){
+        var genre1 = allSeries[i].classList[3];
+        var genre2 = allSeries[i].classList[4];
+        var genre3 = allSeries[i].classList[5];
+        if (genre1 === "Adventure" || genre2 === "Adventure" || genre3 === "Adventure"){
             allSeries[i].style.display = "block";
         }else {
             allSeries[i].style.display = "none";
@@ -120,10 +113,10 @@ function filterSeriesAdventure(){
 function filterSeriesThriller(){
     numFeatSeries.style.display = "none";
     for(var i = 0; i < allSeries.length; i++){
-        var filmCat1 = allSeries[i].classList[3];
-        var filmCat2 = allSeries[i].classList[4];
-        var filmCat3 = allSeries[i].classList[5];
-        if (filmCat1 === "Thriller" || filmCat2 === "Thriller" || filmCat3 === "Thriller"){
+        var genre1 = allSeries[i].classList[3];
+        var genre2 = allSeries[i].classList[4];
+        var genre3 = allSeries[i].classList[5];
+        if (genre1 === "Thriller" || genre2 === "Thriller" || genre3 === "Thriller"){
             allSeries[i].style.display = "block";
         }else {
             allSeries[i].style.display = "none";
