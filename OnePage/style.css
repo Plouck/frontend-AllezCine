@@ -6,8 +6,13 @@
 body{
     font-family: Cabin;
 }
-.cRouge {
+.cRouge{
     color: #DF2620 !important;
+}
+.cGras{
+    color: #DF2620 !important;
+    font-size: 14px;
+    font-weight: bold;
 }
 .row{
     margin-right:0;
@@ -313,6 +318,9 @@ section h3{
 #shopCarousel .detail{
     margin: 0;
     padding: 0;
+    background-color: #F2F1F6;
+    border-bottom-style: solid;
+    border-bottom-color: #bfbdc4;
 }
 #shopCarousel .thumbs{
     margin: 0;
@@ -332,9 +340,6 @@ section h3{
     padding-left: 3px;
     padding-right: 3px;
 }
-/* .pouce img{
-    width: 100px;
-} */
 #shopCarousel .container-fluid{
     margin: 0;
     padding: 0;
