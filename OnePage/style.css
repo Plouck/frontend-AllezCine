@@ -386,6 +386,12 @@ section h3{
     padding: 0;
 }
 
+/* CONTACT */
+.contact .cUs{
+    margin: 0;
+    padding: 0;
+}
+
 /* pop-up age */
 #ageWrapper {
   visibility: hidden;
