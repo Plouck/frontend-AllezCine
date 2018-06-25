@@ -48,4 +48,13 @@ $(document).ready(function(){
     $("#modalMother").on('show.bs.modal', function(){
         $("#vidMother").attr('src', urlMother);
     });
+
+    // Movie Shop Slide 1
+    // var urlSlide1 = $("#movShopVid1").attr('src');
+    // $("#shopCarousel").on('hide.bs.carousel', function(){
+    //     $("#movShopVid1").attr('src', '');
+    // });
+    // $("#shopCarousel").on('show.bs.carousel', function(){
+    //     $("#movShopVid1").attr('src', urlSlide1);
+    // });
 });

@@ -316,7 +316,26 @@ section h3{
 
 /* MOVIE SHOP */
 .arrowWrap{
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding: 0;
+    background-color: #f4f1fa;
+}
+.arrowBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    width: 28px;
+    height: 28px;
+}
+.arrowBox:first-child{
+    margin-right: 4px;
+}
+.arrowBox i{
+    color: #bfbdc4;
 }
 #detailTitle{
     text-transform: uppercase;
