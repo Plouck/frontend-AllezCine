@@ -315,6 +315,12 @@ section h3{
 }
 
 /* MOVIE SHOP */
+.arrowWrap{
+    text-align: right;
+}
+#detailTitle{
+    text-transform: uppercase;
+}
 #shopCarousel .detail{
     margin: 0;
     padding: 0;
