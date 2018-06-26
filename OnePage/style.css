@@ -6,6 +6,9 @@
 body{
     font-family: Cabin;
 }
+.cBlanc{
+    color: #FFFFFF !important;
+}
 .cRouge{
     color: #DF2620 !important;
 }
@@ -416,9 +419,63 @@ section h3{
 
 /* FOOOOOOOOOOTER */
 .footer{
-    height: 500px;
     background-color: #181818;
 }
+.footer #subFrow{
+    text-align: center;
+}
+.footer #mailSub{
+    border:none;
+    background-color: #DF2620;
+    padding: 8px;
+    margin-right: 10px;
+    color: white;
+    min-width: 80px;
+}
+.footer h2{
+    color: #DF2620;
+}
+.footer h4{
+    color: #615c5c;
+}
+.footer hr{
+    height: 1px;
+    background-color: #242222;
+    border-style: none;
+    border-width: 0;
+}
+.footer p{
+    color: #474444;
+    margin: 0;
+}
+.footer p a{
+    color: #474444;
+}
+.footer .minimage{
+    width: 60px;
+}
+.footer button {
+    border: none;
+    background-color: #242222;
+    padding: 6px;
+    margin-right: 2px;
+    color: #474444;
+    min-width: 40px;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+.footer .vidStart{
+    margin: 0;
+    padding-left: 0;
+    padding-right: 12px;
+    padding-bottom: 12px;
+}
+.footer .vidStart img{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+
 
 /* pop-up age */
 #ageWrapper {
@@ -433,12 +490,10 @@ section h3{
   background-color: rgba(32,23,19,.7);
   transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
 }
-
 #ageWrapper.ageUnknown {
   visibility: visible;
   opacity: 1;
 }
-
 #agePopUp {
   position: fixed;
   top: 50%;
@@ -452,7 +507,6 @@ section h3{
   margin-left: -185px;
   box-sizing: border-box;
 }
-
 #agePopUp a {
   background-color: black;
   color: white;
