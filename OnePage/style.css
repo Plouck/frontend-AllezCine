@@ -490,3 +490,12 @@ div.cookie_policy_msg>div>a:last-child{
   width:32px;
   color:#fff;
 }
+.canvas{
+  position: fixed;
+	top: calc(50vh - 40px);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	z-index: 100;
+  right: 0px;
+}
