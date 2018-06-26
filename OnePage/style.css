@@ -544,9 +544,11 @@ div.cookie_policy_msg>div>a:last-child{
   width:32px;
   color:#fff;
 }
+
+/* LE BOUTON DE LA MORT! */
 .canvas{
   position: fixed;
-	top: calc(50vh - 40px);
+	top: calc(100vh - 100px);
 	padding: 0;
 	margin: 0;
 	list-style: none;
