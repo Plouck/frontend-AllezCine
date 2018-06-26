@@ -56,3 +56,11 @@ $(document).ready(function(){
     });
 
 });
+$('#contactSub').click(function () {
+  var firstName = document.getElementById('firstName').value;
+  var lastName = document.getElementById('lastName').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var comment = document.getElementById('comment').value;
+  alert("First name : "+firstName+ "\nLast name : "+lastName + "\nEmail : " + email + "\nSubject : " + subject);
+});
