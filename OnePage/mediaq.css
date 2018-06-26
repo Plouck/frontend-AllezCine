@@ -82,6 +82,12 @@
     .film .aright{
         display: block;
     }
+    .contact .cUs .right{
+        padding-left: 8px;
+    }
+    .contact .cUs .left{
+        padding-right: 8px;
+    }
 }
 @media(min-width:1200px){
     .feat{
@@ -102,5 +108,11 @@
     }
     .film .aright{
         display: block;
+    }
+    .contact .cUs .right{
+        padding-left: 8px;
+    }
+    .contact .cUs .left{
+        padding-right: 8px;
     }
 }
