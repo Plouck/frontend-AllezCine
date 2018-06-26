@@ -1,1367 +1,1383 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="face.css">
-        <link rel="stylesheet" href="mediaq.css">
-        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
-        <title>AllezCiné</title>
-    </head>
-    <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div id="ageWrapper">
-            <div id="agePopUp">
-                <h2>Are you at least 18?</h2>
-                <a href="#" id="ageOkay">Yes</a>
-                <a href="#" id="ageBad">No</a>
-            </div>
-        </div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="face.css">
+  <link rel="stylesheet" href="mediaq.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+  <title>AllezCiné</title>
+</head>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<body>
+
+  <div id="ageWrapper">
+    <div id="agePopUp">
+      <h2>Are you at least 18?</h2>
+      <a href="#" id="ageOkay">Yes</a>
+      <a href="#" id="ageBad">No</a>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#Page"><span class="cRouge">ALLEZ</span>CINE!</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="nodrop"><a href="#">HOME</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">GENRE <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#featuredMovies" onclick="filterMovComedy()">Comedy</a></li>
-                            <li><a href="#featuredMovies" onclick="filterMovDrama()">Drama</a></li>
-                            <li><a href="#featuredMovies" onclick="filterMovAdventure()">Adventure</a></li>
-                            <li><a href="#featuredMovies" onclick="filterMovThriller()">Thriller</a></li>
-                            <li><a href="#featuredMovies" onclick="filterMovFantasy()">Fantasy</a></li>
-                            <li><a href="#featuredMovies" onclick="filterMovSciFi()">Sci-Fi</a></li>
-                        </ul>
-                    </li>
-                    <li class="nodrop"><a href="#featuredMovies"><span class="feat">FEATURED </span>MOVIES</a></li>
-                    <li class="nodrop"><a href="#featuredSeries"><span class="feat">FEATURED </span>TV SERIES</a></li>
-                    <li class="nodrop"><a href="#movieShop"><span class="feat">MOVIE </span>SHOP</a></li>
-                    <li class="nodrop"><a href="#contact">CONTACT</a></li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control pull-right" placeholder="Recherche" id="seekBar">
-                        <span class="input-group-btn">
+      <a class="navbar-brand" href="#Page"><span class="cRouge">ALLEZ</span>CINE!</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="nodrop"><a href="#">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">GENRE <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#featuredMovies" onclick="filterMovComedy()">Comedy</a></li>
+            <li><a href="#featuredMovies" onclick="filterMovDrama()">Drama</a></li>
+            <li><a href="#featuredMovies" onclick="filterMovAdventure()">Adventure</a></li>
+            <li><a href="#featuredMovies" onclick="filterMovThriller()">Thriller</a></li>
+            <li><a href="#featuredMovies" onclick="filterMovFantasy()">Fantasy</a></li>
+            <li><a href="#featuredMovies" onclick="filterMovSciFi()">Sci-Fi</a></li>
+          </ul>
+        </li>
+        <li class="nodrop"><a href="#featuredMovies"><span class="feat">FEATURED </span>MOVIES</a></li>
+        <li class="nodrop"><a href="#featuredSeries"><span class="feat">FEATURED </span>TV SERIES</a></li>
+        <li class="nodrop"><a href="#movieShop"><span class="feat">MOVIE </span>SHOP</a></li>
+        <li class="nodrop"><a href="#contact">CONTACT</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control pull-right" placeholder="Recherche" id="seekBar">
+          <span class="input-group-btn">
                             <button type="submit" class="btn btn-default">
                                 <span class="glyphicon glyphicon-search">
                                     <span class="sr-only">Search</span>
-                                </span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-            </div>
-    	</nav>
+          </span>
+          </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </nav>
 
-        <header class="jumbotron col-12 col-md-12">
-            <div class="laDivABibi"></div>
-            <div class="row">
-    			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-    				<ol class="carousel-indicators carousel-indicators-carre">
-    					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    					<li data-target="#myCarousel" data-slide-to="1"></li>
-    					<li data-target="#myCarousel" data-slide-to="2"></li>
-    					<li data-target="#myCarousel" data-slide-to="3"></li>
-    				</ol>
-
-    				<!-- SLIDES -->
-    				<div class="carousel-inner">
-                        <div class="item active">
-    						<img src="./assets/img/jumbo_pusher.jpg" alt="Pusher" style="width:100%;">
-    						<div class="carousel-caption">
-    							<h2>PUSH<span class="cRouge">ER</span></h2>
-    							<p>A drug pusher grows increasingly desperate after a botched deal leaves him with a debt to a drug lord.</p>
-    						</div>
-    					</div>
-    					<div class="item">
-    						<img src="./assets/img/jumbo_itfollows.jpg" alt="It Follows" style="width:100%;">
-    						<div class="carousel-caption">
-    							<h2>IT <span class="cRouge">FOLL</span>OWS</h2>
-    							<p>A young woman is followed by an unknown supernatural force after a sexual encounter.</p>
-    						</div>
-    					</div>
-                        <div class="item">
-    						<img src="./assets/img/jumbo_brazil.jpg" alt="Brazil" style="width:100%;">
-    						<div class="carousel-caption">
-    							<h2><span class="cRouge">BRA</span>ZIL</h2>
-    							<p>A bureaucrat tries to correct an administrative error, and becomes an enemy of the state.</p>
-    						</div>
-    					</div>
-    					<div class="item">
-    						<img src="./assets/img/jumbo_whatwedo2.jpg" alt="What we do in the shadows" style="width:100%;">
-    						<div class="carousel-caption">
-    							<h2><span class="cRouge">WHAT</span> WE DO IN THE <span class="cRouge">SHA</span>DOWS</h2>
-    							<p>A mockumentary horror comedy film about a group of vampires who live together in Wellington.</p>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-
-            <!-- LA BANDE ROUGE pour Login etc... -->
-            <div class="row">
-                <div class="redBan col-12">
-
-
-                  <div class="container pb-modalreglog-container">
+  <header class="jumbotron col-12 col-md-12">
+    <div class="laDivABibi"></div>
     <div class="row">
-        <div class="col-xs-12 col-md-4 col-md-offset-4">
-            <legend class="pb-modalreglog-legend">Modal registration form</legend>
-            <div class="input-group pb-modalreglog-input-group">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <ol class="carousel-indicators carousel-indicators-carre">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- SLIDES -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="./assets/img/jumbo_pusher.jpg" alt="Pusher" style="width:100%;">
+            <div class="carousel-caption">
+              <h2>PUSH<span class="cRouge">ER</span></h2>
+              <p>A drug pusher grows increasingly desperate after a botched deal leaves him with a debt to a drug lord.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./assets/img/jumbo_itfollows.jpg" alt="It Follows" style="width:100%;">
+            <div class="carousel-caption">
+              <h2>IT <span class="cRouge">FOLL</span>OWS</h2>
+              <p>A young woman is followed by an unknown supernatural force after a sexual encounter.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./assets/img/jumbo_brazil.jpg" alt="Brazil" style="width:100%;">
+            <div class="carousel-caption">
+              <h2><span class="cRouge">BRA</span>ZIL</h2>
+              <p>A bureaucrat tries to correct an administrative error, and becomes an enemy of the state.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./assets/img/jumbo_whatwedo2.jpg" alt="What we do in the shadows" style="width:100%;">
+            <div class="carousel-caption">
+              <h2><span class="cRouge">WHAT</span> WE DO IN THE <span class="cRouge">SHA</span>DOWS</h2>
+              <p>A mockumentary horror comedy film about a group of vampires who live together in Wellington.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LA BANDE ROUGE pour Login etc... -->
+    <div class="row">
+      <div class="redBan col-12">
+
+
+        <div class="container pb-modalreglog-container">
+          <div class="row">
+            <div class="col-xs-12 col-md-4 col-md-offset-4">
+              <div class="input-group pb-modalreglog-input-group">
                 <button class="btn btn-primary pb-modalreglog-submit" data-toggle="modal" data-target="#myModal">Login</button>
                 <button class="btn btn-primary pb-modalreglog-submit" data-toggle="modal" data-target="#myModal2">Register</button>
-            </div>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              </div>
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">Login form</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="email">Email address</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <input type="password" class="form-control" id="pws" placeholder="Password">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Log in</button>
-                        </div>
+                                </button>
+                      <h4 class="modal-title" id="myModalLabel">Login form</h4>
                     </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="text">identifiant</label>
+                          <div class="input-group pb-modalreglog-input-group">
+                            <input type="identifiant" class="form-control" id="identifiant" placeholder="identifiant">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <div class="input-group pb-modalreglog-input-group">
+                            <input type="password" class="form-control" id="pws" placeholder="Password">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                          </div>
+                          <div>
+                            <a href="#">Mot de passe perdu ?</a>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="checkbox" id="stay" name="stay">
+                          <span>rester connecté</span>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">Créer un compte</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#" data-dismiss="modal">Close</a>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              </div>
+
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-sm" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title" id="myModalLabel">Registration form</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form class="pb-modalreglog-form-reg">
-                                <div class="form-group">
-                                    <div id="pb-modalreglog-progressbar"></div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email address</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input type="password" class="form-control" id="inputPws" placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="confirmpassword">Confirm password</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input type="password" class="form-control" id="inputConfirmPws" placeholder="Confirm Password">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-                                        <input type="text" class="form-control" id="countries" placeholder="Country">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="age">Age.</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <input id="age">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="ch" name="chs">
-                                    I agree with <a href="#">terms and conditions.</a>
-                                </div>
-                            </form>
-                                          </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Sign up</button>
-                        </div>
+                      <h4 class="modal-title" id="myModalLabel">Registration form</h4>
                     </div>
+                    <div class="modal-body">
+                      <form class="pb-modalreglog-form-reg">
+                        <div class="form-group">
+                          <div id="pb-modalreglog-progressbar"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="identifiant">identifiant</label>
+                          <div class="input-group pb-modalreglog-input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" id="inputIdentifiant" placeholder="identifiant">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email address</label>
+                          <div class="input-group pb-modalreglog-input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <div class="input-group pb-modalreglog-input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" class="form-control" id="inputPws" placeholder="Password">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="confirmpassword">Confirm password</label>
+                          <div class="input-group pb-modalreglog-input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" class="form-control" id="inputConfirmPws" placeholder="Confirm Password">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="checkbox" id="ch" name="chs"> <a href="#">Conditions</a> Conditions générales d'utilisation.
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Register</button>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+
+
+
+
+      </div>
     </div>
-</div>
+  </header>
 
 
+  <!-- RESEAUX SOCIAUX -->
+  <ul class="social">
+    <li class="facebook"><a href="#" rel="noopener" title="facebook"><span>facebook</span><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li class="dribbble"><a href="#" rel="noopener" title="dribbble"><span>dribbble</span><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+    <li class="twitter"><a href="#" rel="noopener" title="twitter"><span>twitter</span><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li class="googleplus"><a href="#" rel="noopener" title="google plus"><span>google+</span><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+  </ul>
 
 
-                </div>
+  <!--SECTION FILM-->
+  <section class="film">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="assets/img/poster_standbyme.jpg" alt="Stand By Me" data-toggle="modal" data-target="#modalStand" class="hover-shadow">
+          </div>
+          <div class="caption-container">
+            <p id="titreFilm" data-toggle="modal" data-target="#modalStand" class="hover-shadow">Stand By Me</p>
+            <div class="row">
+              <div class="col-md-3 aleft">
+                <p>1986</p>
+              </div>
+              <div class="col-md-9 aright">
+                <p>Adventure</p>
+              </div>
             </div>
-        </header>
-
-
-        <!-- RESEAUX SOCIAUX -->
-        <ul class="social">
-    		<li class="facebook"><a href="#" rel="noopener" title="facebook"><span>facebook</span><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-    		<li class="dribbble"><a href="#" rel="noopener" title="dribbble"><span>dribbble</span><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-            <li class="twitter"><a href="#" rel="noopener" title="twitter"><span>twitter</span><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-    		<li class="googleplus"><a href="#" rel="noopener" title="google plus"><span>google+</span><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-    	</ul>
-
-
-        <!--SECTION FILM-->
-        <section class="film">
-    		<div class="container">
-    			<div class="row">
-                    <div class="col-md-1"></div>
-    				<div class="col-md-2 col-sm-4 col-xs-6">
-    					<div class="thumbnail">
-    						<img src="assets/img/poster_standbyme.jpg" alt="Stand By Me" data-toggle="modal" data-target="#modalStand" class="hover-shadow">
-    					</div>
-    					<div class="caption-container">
-    				        <p id="titreFilm" data-toggle="modal" data-target="#modalStand" class="hover-shadow">Stand By Me</p>
-                            <div class="row">
-                                <div class="col-md-3 aleft">
-                                    <p>1986</p>
-                                </div>
-                                <div class="col-md-9 aright">
-                                    <p>Adventure</p>
-                                </div>
-                            </div>
-    	      			</div>
-    				</div>
-    				<div class="col-md-2 col-sm-4 col-xs-6">
-    					<div class="thumbnail">
-    						<img src="assets/img/poster_lifeofpi.jpg" alt="Life Of Pi" data-toggle="modal" data-target="#modalPi" class="hover-shadow">
-    					</div>
-    					<div class="caption-container">
-    	        			<p id="titreFilm" data-toggle="modal" data-target="#modalPi" class="hover-shadow">Life Of Pi</p>
-                            <div class="row">
-                                <div class="col-md-3 aleft">
-                                    <p>2012</p>
-                                </div>
-                                <div class="col-md-9 aright">
-                                    <p>Fantasy</p>
-                                </div>
-                            </div>
-    	     			 </div>
-    				</div>
-    				<div class="col-md-2 col-sm-4 col-xs-6">
-    					<div class="thumbnail">
-    						<img src="assets/img/poster_mother.jpg" alt="Mother!" data-toggle="modal" data-target="#modalMother" class="hover-shadow">
-    					</div>
-    					<div class="caption-container">
-    				        <p id="titreFilm" data-toggle="modal" data-target="#modalMother" class="hover-shadow">Mother!</p>
-                            <div class="row">
-                                <div class="col-md-3 aleft">
-                                    <p>2004</p>
-                                </div>
-                                <div class="col-md-9 aright">
-                                    <p>Thriller</p>
-                                </div>
-                            </div>
-    				     </div>
-    				</div>
-    				<div class="col-md-2 col-sm-4 col-xs-6">
-    					<div class="thumbnail">
-    						<img src="assets/img/poster_borat.jpg" alt="Borat" data-toggle="modal" data-target="#modalBorat" class="hover-shadow">
-    					</div>
-    				    <div class="caption-container">
-    				        <p id="titreFilm" data-toggle="modal" data-target="#modalBorat" class="hover-shadow">Borat</p>
-                            <div class="row">
-                                <div class="col-md-3 aleft">
-                                    <p>2006</p>
-                                </div>
-                                <div class="col-md-9 aright">
-                                    <p>Comedy</p>
-                                </div>
-                            </div>
-    				    </div>
-    				</div>
-    				<div class="col-md-2 col-sm-4 col-xs-6">
-    					<div class="thumbnail">
-    						<img src="assets/img/poster_therewillbeblood.jpg" alt="There Will Be Blood" data-toggle="modal" data-target="#modalBlood" class="hover-shadow">
-    					</div>
-    					<div class="caption-container">
-    				        <p id="titreFilm" data-toggle="modal" data-target="#modalBlood" class="hover-shadow">There Will Be Blood</p>
-                            <div class="row">
-                                <div class="col-md-3 aleft">
-                                    <p>2007</p>
-                                </div>
-                                <div class="col-md-9 aright">
-                                    <p>Drama</p>
-                                </div>
-                            </div>
-    				    </div>
-    				</div>
-                    <div class="col-md-1"></div>
-    			</div>
-    		</div>
-    	</section>
-
-        <!-- Modals STAND -->
-        <div class="modal fade" id="modalStand" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Stand By Me</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5>1986 Adventure/Drama by Rob Reiner</h5>
-                        <p>Stars : Wil Wheaton, River Phoenix, Corey Feldman, Jerry O'Connell, Kiefer Sutherland...</p>
-                        <p>It's the summer of 1959 in Castlerock, Oregon and four 12 year-old boys - Gordie, Chris, Teddy and Vern - are fast friends. After learning of the general location of the body of a local boy who has been missing for several days, they set off into woods to see it. Along the way, they learn about themselves, the meaning of friendship and the need to stand up for what is right.</p>
-                    </div>
-                    <div class="modal-trailer">
-                        <iframe id="vidStand" width="560" height="315" src="https://www.youtube.com/embed/oYTfYsODWQo"></iframe>
-                    </div>
-                    <br>
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- Modals PI -->
-        <div class="modal fade" id="modalPi" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Life Of Pi</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5>2012 Adventure/Fantasy by Ang Lee</h5>
-                        <p>Stars : Suraj Sharma, Irrfan Khan, Adil Hussain...</p>
-                        <p>In Canada, a writer visits the Indian storyteller Pi Patel and asks him to tell his life story. Pi tells the story of his childhood in Pondicherry, India, and the origin of his nickname. One day, his father, a zoo owner, explains that the municipality is no longer supporting the zoo and he has hence decided to move to Canada, where the animals the family owns would also be sold. They board on a Japanese cargo ship with the animals and out of the blue, there is a storm, followed by a shipwrecking. Pi survives in a lifeboat with a zebra, an orangutan, a hyena and a male Bengal tiger nicknamed Richard Parker. They are adrift in the Pacific Ocean, with aggressive hyena and Richard Parker getting hungry. Pi needs to find a way to survive.</p>
-                    </div>
-                    <div class="modal-trailer">
-                        <iframe id="vidPi" width="560" height="315" src="https://www.youtube.com/embed/3mMN693-F3U"></iframe>
-                    </div>
-                    <br>
-                </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="assets/img/poster_lifeofpi.jpg" alt="Life Of Pi" data-toggle="modal" data-target="#modalPi" class="hover-shadow">
+          </div>
+          <div class="caption-container">
+            <p id="titreFilm" data-toggle="modal" data-target="#modalPi" class="hover-shadow">Life Of Pi</p>
+            <div class="row">
+              <div class="col-md-3 aleft">
+                <p>2012</p>
+              </div>
+              <div class="col-md-9 aright">
+                <p>Fantasy</p>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Modals MOTHER -->
-        <div class="modal fade" id="modalMother" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Mother!</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5>2017 Drama/Thriller/Mystery by Darren Aronofsky</h5>
-                        <p>Stars : Jennifer Lawrence, Javier Bardem, Ed Harris, Michelle Pfeiffer...</p>
-                        <p>Amidst a wild flat meadow encircled by an Edenic lush forest, a couple have cocooned themselves in a secluded mansion that was not so long ago burned to the ground, devotedly restored by the supportive wife. Within this safe environment, the once famous middle-aged poet husband is desirous of creating his magnum opus; however, he seems unable to break out of the persistent creative rut that haunts him. Then, unexpectedly, a knock at the door, the sudden arrival of a cryptic late-night visitor and his intrusive wife will stimulate the writer's stagnant imagination. Little by little, much to the perplexed wife's surprise, the more chaos he lets in their haven, the better for his punctured male ego. In the end, will this incremental mess blemish, irreparably, the couple's inviolable sanctuary?</p>
-                    </div>
-                    <div class="modal-trailer">
-                        <iframe id="vidMother" width="560" height="315" src="https://www.youtube.com/embed/XpICoc65uh0"></iframe>
-                    </div>
-                    <br>
-                </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="assets/img/poster_mother.jpg" alt="Mother!" data-toggle="modal" data-target="#modalMother" class="hover-shadow">
+          </div>
+          <div class="caption-container">
+            <p id="titreFilm" data-toggle="modal" data-target="#modalMother" class="hover-shadow">Mother!</p>
+            <div class="row">
+              <div class="col-md-3 aleft">
+                <p>2004</p>
+              </div>
+              <div class="col-md-9 aright">
+                <p>Thriller</p>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Modals BORAT -->
-        <div class="modal fade" id="modalBorat" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5>2006 Comedy by Larry Charles</h5>
-                        <p>Stars : Sacha Baron Cohen, Ken Davitian...</p>
-                        <p>Borat Sagdiyev is a TV reporter of a popular show in Kazakhstan as Kazakhstan's sixth most famous man and a leading journalist. He is sent from his home to America by his government to make a documentary about American society and culture. Borat takes a course in New York City to understand American humor. While watching Baywatch on TV, Borat discovers how beautiful their women are in the form of C. J. Parker, who was played by actress Pamela Anderson who hails from Malibu, California. He decides to go on a cross-country road trip to California in a quest to make her his wife and take her back to his country. On his journey Borat and his producer encounter a country full of strange and wonderful Americans, real people in real chaotic situations with hysterical consequences.</p>
-                    </div>
-                    <div class="modal-trailer">
-                        <iframe id="vidBorat" width="560" height="315" src="https://www.youtube.com/embed/vlnUa_dNsRQ"></iframe>
-                    </div>
-                    <br>
-                </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="assets/img/poster_borat.jpg" alt="Borat" data-toggle="modal" data-target="#modalBorat" class="hover-shadow">
+          </div>
+          <div class="caption-container">
+            <p id="titreFilm" data-toggle="modal" data-target="#modalBorat" class="hover-shadow">Borat</p>
+            <div class="row">
+              <div class="col-md-3 aleft">
+                <p>2006</p>
+              </div>
+              <div class="col-md-9 aright">
+                <p>Comedy</p>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Modals BLOOD -->
-        <div class="modal fade" id="modalBlood" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">There Will Be Blood</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5>2007 Drama by Paul Thomas Anderson</h5>
-                        <p>Stars : Wil Daniel Day-Lewis, Paul Dano, Ciarán Hinds, Dillon Freasier...</p>
-                        <p>The intersecting life stories of Daniel Plainview and Eli Sunday in early twentieth century California presents miner-turned-oilman Daniel Plainview, a driven man who will do whatever it takes to achieve his goals. He works hard but also takes advantage of those around him at their expense if need be. His business partner/son (H.W.) is, in reality, an "acquired" child whose true biological single-parent father (working on one of Daniel's rigs) died in a workplace accident. Daniel is deeply protective of H.W. if only for what H.W. brings to the partnership. Eli Sunday is one in a pair of twins whose family farm Daniel purchases for the major oil deposit located on it. Eli, a local preacher and a self-proclaimed faith healer, wants the money from the sale of the property to finance his own church.</p>
-                    </div>
-                    <div class="modal-trailer">
-                        <iframe id="vidBlood" width="560" height="315" src="https://www.youtube.com/embed/FeSLPELpMeM"></iframe>
-                    </div>
-                    <br>
-                </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="assets/img/poster_therewillbeblood.jpg" alt="There Will Be Blood" data-toggle="modal" data-target="#modalBlood" class="hover-shadow">
+          </div>
+          <div class="caption-container">
+            <p id="titreFilm" data-toggle="modal" data-target="#modalBlood" class="hover-shadow">There Will Be Blood</p>
+            <div class="row">
+              <div class="col-md-3 aleft">
+                <p>2007</p>
+              </div>
+              <div class="col-md-9 aright">
+                <p>Drama</p>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </section>
 
-
-
-        <br><br>
-        <!-- FEATURED MOVIES -->
-		<section id="featuredMovies" class="feature_movies">
-			<div class="container">
-				<h3>FEATURED MOVIES</h3>
-				<div class= "filtres">
-					<button class="filtre_active" onclick="filterMovAll()">All</button>
-					<button id="showComedy" onclick="filterMovComedy()" >Comedy</button>
-					<button id="showDrama" onclick="filterMovDrama()" >Drama</button>
-					<button id="showAdventure" onclick="filterMovAdventure() ">Adventure</button>
-                    <button id="showThriller" onclick="filterMovThriller() ">Thriller</button>
-                    <button id="showFantasy" onclick="filterMovFantasy() ">Fantasy</button>
-                    <button id="showSciFi" onclick="filterMovSciFi() ">Sci-Fi</button>
-				</div>
-
-				<div class="container feature_movies_container">
-					<div class="row">
-						<div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_memento.jpg" alt="">
-								<div class="caption">
-									<h5>Memento</h5>
-									<p>2000</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_elly.jpg" alt="">
-								<div class="caption">
-									<h5>Darbareye Elly</h5>
-									<p>2009</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-3 col-md-2 SciFi Thriller">
-							<div class="thumbnail">
-								<img src="assets/img/poster_alien.jpg" alt="">
-								<div class="caption">
-									<h5>Alien</h5>
-									<p>1979</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/poster_sunshine.jpg" alt="">
-								<div class="caption">
-									<h5>Little Miss Sunshine</h5>
-									<p>2006</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller SciFi">
-							<div class="thumbnail">
-								<img src="assets/img/poster_triangle.jpg" alt="">
-								<div class="caption">
-									<h5>Triangle</h5>
-									<p>2009</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/poster_strangelove.jpg" alt="">
-								<div class="caption">
-									<h5>Dr Strangelove</h5>
-									<p>1964</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_revenant.jpg" alt="">
-								<div class="caption">
-									<h5>The Revenant</h5>
-									<p>2015</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller">
-							<div class="thumbnail">
-								<img src="assets/img/poster_reservoir.jpg" alt="">
-								<div class="caption">
-									<h5>Reservoir Dogs</h5>
-									<p>1992</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Drama Thriller">
-							<div class="thumbnail">
-								<img src="assets/img/poster_pan.jpg" alt="">
-								<div class="caption">
-									<h5>Pan's Labyrinth</h5>
-									<p>2006</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_nobody.jpg" alt="">
-								<div class="caption">
-									<h5>Mr Nobody</h5>
-									<p>2009</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_memories.jpg" alt="">
-								<div class="caption">
-									<h5>Salinui chueok</h5>
-									<p>2003</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/poster_malkovitch.jpg" alt="">
-								<div class="caption">
-									<h5>Being John Malkovitch</h5>
-									<p>1999</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/poster_lebowski.jpg" alt="">
-								<div class="caption">
-									<h5>The Big Lebowski</h5>
-									<p>1998</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_lavita.jpg" alt="">
-								<div class="caption">
-									<h5>La Vita E Bella</h5>
-									<p>1997</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_jagten.jpg" alt="">
-								<div class="caption">
-									<h5>Jagten</h5>
-									<p>2012</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/poster_groundhog.jpg" alt="">
-								<div class="caption">
-									<h5>Groundhog Day</h5>
-									<p>1993</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/poster_borat.jpg" alt="">
-								<div class="caption">
-									<h5>Borat</h5>
-									<p>2006</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Thriller SciFi">
-							<div class="thumbnail">
-								<img src="assets/img/poster_donnie.jpg" alt="">
-								<div class="caption">
-									<h5>Donnie Darko</h5>
-									<p>2001</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_dasboot.jpg" alt="">
-								<div class="caption">
-									<h5>Das Boot</h5>
-									<p>1981</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_cidade.jpg" alt="">
-								<div class="caption">
-									<h5>Cidade De Deus</h5>
-									<p>2002</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 SciFi Thriller">
-							<div class="thumbnail">
-								<img src="assets/img/poster_chrono.jpg" alt="">
-								<div class="caption">
-									<h5>Los Cronocrimenes</h5>
-									<p>2007</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Fantasy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_chihiro.jpg" alt="">
-								<div class="caption">
-									<h5>Spirited Away</h5>
-									<p>2001</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_captain.jpg" alt="">
-								<div class="caption">
-									<h5>Captain Fantastic</h5>
-									<p>2016</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 SciFi Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_blade.jpg" alt="">
-								<div class="caption">
-									<h5>Blade Runner 2049</h5>
-									<p>2017</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_beauty.jpg" alt="">
-								<div class="caption">
-									<h5>American Beauty</h5>
-									<p>1999</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 SciFi Fantasy Adventure">
-							<div class="thumbnail">
-								<img src="assets/img/poster_avatar.jpg" alt="">
-								<div class="caption">
-									<h5>Avatar</h5>
-									<p>2009</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_therewillbeblood.jpg" alt="">
-								<div class="caption">
-									<h5>There Will Be Blood</h5>
-									<p>2007</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_standbyme.jpg" alt="">
-								<div class="caption">
-									<h5>Stand By Me</h5>
-									<p>1986</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_mother.jpg" alt="">
-								<div class="caption">
-									<h5>Mother!</h5>
-									<p>2017</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Fantasy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/poster_lifeofpi.jpg" alt="">
-								<div class="caption">
-									<h5>Life Of Pi</h5>
-									<p>2012</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="feature-btn-wrapper">
-                    <button id="numFeatMovs" onclick="toggleMovies()">Show more</button>
-				</div>
-			</div>
-
-			</div>
-		</section>
-
-
+  <!-- Modals STAND -->
+  <div class="modal fade" id="modalStand" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Stand By Me</h4>
+        </div>
+        <div class="modal-body">
+          <h5>1986 Adventure/Drama by Rob Reiner</h5>
+          <p>Stars : Wil Wheaton, River Phoenix, Corey Feldman, Jerry O'Connell, Kiefer Sutherland...</p>
+          <p>It's the summer of 1959 in Castlerock, Oregon and four 12 year-old boys - Gordie, Chris, Teddy and Vern - are fast friends. After learning of the general location of the body of a local boy who has been missing for several days, they set off
+            into woods to see it. Along the way, they learn about themselves, the meaning of friendship and the need to stand up for what is right.</p>
+        </div>
+        <div class="modal-trailer">
+          <iframe id="vidStand" width="560" height="315" src="https://www.youtube.com/embed/oYTfYsODWQo"></iframe>
+        </div>
         <br>
-        <!-- FEATURED SERIES -->
-		<section id="featuredSeries" class="feature_series">
-			<div class="container">
-				<h3>FEATURED SERIES</h3>
-				<div class= "filtres">
-					<button class="filtre_active" onclick="filterSeriesAll()">All</button>
-					<button id="viewComedy" onclick="filterSeriesComedy()">Comedy</button>
-					<button id="viewDrama" onclick="filterSeriesDrama()">Drama</button>
-					<button id="viewAdventure" onclick="filterSeriesAdventure()">Adventure</button>
-                    <button id="viewThriller" onclick="filterSeriesThriller()">Thriller</button>
-                    <button id="viewFantasy" onclick="filterSeriesFantasy()">Fantasy</button>
-                    <button id="viewSciFi" onclick="filterSeriesSciFi()">Sci-Fi</button>
-				</div>
-
-				<div class="container feature_series_container">
-					<div class="row">
-						<div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_breaking.jpg" alt="">
-								<div class="caption">
-									<h5>Breaking Bad</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_cards.jpg" alt="">
-								<div class="caption">
-									<h5>House Of Cards</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_dekalog.jpg" alt="">
-								<div class="caption">
-									<h5>Dekalog</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama Fantasy SciFi">
-							<div class="thumbnail">
-								<img src="assets/img/series_leftovers.jpg" alt="">
-								<div class="caption">
-									<h5>The Leftovers</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 SciFi Drama Thriller">
-							<div class="thumbnail">
-								<img src="assets/img/series_mirror.jpg" alt="">
-								<div class="caption">
-									<h5>Black Mirror</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama Thriller">
-							<div class="thumbnail">
-								<img src="assets/img/series_narcos.jpg" alt="">
-								<div class="caption">
-									<h5>Narcos</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_rome.jpg" alt="">
-								<div class="caption">
-									<h5>Rome</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_wire.jpg" alt="">
-								<div class="caption">
-									<h5>The Wire</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/series_curb.jpg" alt="">
-								<div class="caption">
-									<h5>Curb Your Enthusiasm</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/series_crowd.jpg" alt="">
-								<div class="caption">
-									<h5>The IT Crowd</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_deadwood.jpg" alt="">
-								<div class="caption">
-									<h5>Deadwood</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_downton.jpg" alt="">
-								<div class="caption">
-									<h5>Downton Abbey</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Comedy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_fargo.jpg" alt="">
-								<div class="caption">
-									<h5>Fargo</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Adventure">
-							<div class="thumbnail">
-								<img src="assets/img/series_got.jpg" alt="">
-								<div class="caption">
-									<h5>Game Of Thrones</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_knick.jpg" alt="">
-								<div class="caption">
-									<h5>The Knick</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_night.jpg" alt="">
-								<div class="caption">
-									<h5>The Night Of</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/series_office.jpg" alt="">
-								<div class="caption">
-									<h5>The Office</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_ray.jpg" alt="">
-								<div class="caption">
-									<h5>Ray Donovan</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Adventure SciFi Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/series_rick.jpg" alt="">
-								<div class="caption">
-									<h5>Rick & Morty</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_robot.jpg" alt="">
-								<div class="caption">
-									<h5>Mr Robot</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_saul.jpg" alt="">
-								<div class="caption">
-									<h5>Better Call Saul</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/series_thick.jpg" alt="">
-								<div class="caption">
-									<h5>The Thick Of It</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Thriller Drama">
-							<div class="thumbnail">
-								<img src="assets/img/series_twin.jpg" alt="">
-								<div class="caption">
-									<h5>Twin Peaks</h5>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
-							<div class="thumbnail">
-								<img src="assets/img/series_wonderfall.jpg" alt="">
-								<div class="caption">
-									<h5>Wonderfall</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="feature-btn-wrapper">
-                    <button id="numFeatSeries" onclick="toggleSeries()">Show more</button>
-				</div>
-			</div>
-
-			</div>
-		</section>
-
-
-
+      </div>
+    </div>
+  </div>
+  <!-- Modals PI -->
+  <div class="modal fade" id="modalPi" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Life Of Pi</h4>
+        </div>
+        <div class="modal-body">
+          <h5>2012 Adventure/Fantasy by Ang Lee</h5>
+          <p>Stars : Suraj Sharma, Irrfan Khan, Adil Hussain...</p>
+          <p>In Canada, a writer visits the Indian storyteller Pi Patel and asks him to tell his life story. Pi tells the story of his childhood in Pondicherry, India, and the origin of his nickname. One day, his father, a zoo owner, explains that the municipality
+            is no longer supporting the zoo and he has hence decided to move to Canada, where the animals the family owns would also be sold. They board on a Japanese cargo ship with the animals and out of the blue, there is a storm, followed by a shipwrecking.
+            Pi survives in a lifeboat with a zebra, an orangutan, a hyena and a male Bengal tiger nicknamed Richard Parker. They are adrift in the Pacific Ocean, with aggressive hyena and Richard Parker getting hungry. Pi needs to find a way to survive.</p>
+        </div>
+        <div class="modal-trailer">
+          <iframe id="vidPi" width="560" height="315" src="https://www.youtube.com/embed/3mMN693-F3U"></iframe>
+        </div>
         <br>
-        <!-- MOVIE SHOP -->
-        <section id="movieShop" class="shop_movies">
-            <div class="container">
-                <h3>MOVIE SHOP</h3>
-                <div id="shopCarousel" class="carousel slide" data-interval="false">
-                    <!-- arrows -->
-                    <div class="arrowWrap">
-        				<a class="arrowBox" href="#shopCarousel" data-slide="prev"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>
-        				<a class="arrowBox" href="#shopCarousel" data-slide="next"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a>
-        			</div>
-                    <!-- THE SLIDES -->
-                    <div class="carousel-inner">
-                        <!-- slide -->
-                        <div class="item active">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <!-- THUMBS SLIDE 1 -->
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 thumbs">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_alien.jpg" alt="Alien"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Alien</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>1979</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>15,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_standbyme.jpg" alt="Stand By Me"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Stand By Me</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>1986</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>12,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_memento.jpg" alt="Memento"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Memento</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2000</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>17,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_triangle.jpg" alt="Triangle"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Triangle</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2007</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>12,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_reservoir.jpg" alt="Reservoir Dogs"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Reservoir Dogs</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>1992</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>13,50 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_donnie.jpg" alt="Donnie Darko"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Donnie Darko</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2001</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>12,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_avatar.jpg" alt="Avatar"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Avatar</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2009</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>22,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_jagten.jpg" alt="Jagten"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Jagten</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2012</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>18,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                        </div>
-        							</div>
-                                    <!-- DETAIL SLIDE 1 -->
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 detail">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <span id="detailVid"><iframe id="movShopVid1" class="embed-responsive-item" src="https://www.youtube.com/embed/jQ5lPt9edzQ"></iframe></span>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                <h4 class="cRouge" id="detailTitle">ALIEN</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Storyline</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 id="detailStory">In the distant future, the crew of the commercial spaceship Nostromo are on their way home when they pick up a distress call from a distant moon. The crew are under obligation to investigate and the spaceship descends on the moon afterwards. After a rough landing, three crew members leave the spaceship to explore the area on the moon. At the same time as they discover a hive colony of some unknown creature, the ship's computer deciphers the message to be a warning, not a distress call.</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Released</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 id="detailYear">1979</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Genres</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 id="detailGenre">Horror | Sci-Fi</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Price</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 class="cGras" id="detailPrice">15,00 €</h5>
-                                            </div>
-                                        </div>
-        							</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide -->
-                        <div class="item">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <!-- THUMBS SLIDE 2 -->
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 thumbs">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_sunshine.jpg" alt="Alien"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Little Miss Sunshine</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2006</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>14,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_elly.jpg" alt="Stand By Me"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Darbareye Elly</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2009</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>11,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_dasboot.jpg" alt="Memento"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Das Boot</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>1981</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>8,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_chihiro.jpg" alt="Triangle"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Spirited Away</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2001</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>10,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_beauty.jpg" alt="Reservoir Dogs"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">American Beauty</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>1999</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>10,50 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_mother.jpg" alt="Donnie Darko"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Mother!</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2017</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>19,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_lifeofpi.jpg" alt="Avatar"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">Lif Of Pi</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>2012</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>16,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
-                            				    <div class="thumbnail">
-                            				    	<a href="#movieShop"><img class="shopImg" src="assets/img/poster_lavita.jpg" alt="Jagten"></a>
-                            				    </div>
-                            				    <div class="caption-container">
-                            				        <p id="titreFilm">La Vita E Bella</p>
-                                                    <div class="row">
-                                                        <div class="col-md-3 aleft">
-                                                            <p>1997</p>
-                                                        </div>
-                                                        <div class="col-md-9 aright">
-                                                            <p>11,00 €</p>
-                                                        </div>
-                                                    </div>
-                            	      		    </div>
-                                            </div>
-                                        </div>
-        							</div>
-                                    <!-- DETAIL SLIDE 2 -->
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 detail">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <span id="detailVid2"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wvwVkllXT80"></iframe></span>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                <h4 class="cRouge" id="detailTitle2">LITTLE MISS SUNSHINE</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Storyline</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 id="detailStory2">In Albuquerque, Sheryl Hoover brings her suicidal brother Frank to the breast of her dysfunctional and emotionally bankrupted family. Frank is homosexual, an expert in Proust. He tried to commit suicide when he was rejected by his boyfriend and his great competitor became renowned and recognized as number one in the field of Proust. Sheryl's husband Richard is unsuccessfully trying to sell his self-help and self-improvement technique using nine steps to reach success, but he is actually a complete loser. Her son Dwayne has taken a vow of silence as a follower of Nietzsche and aims to be a jet pilot. Dwayne's grandfather Edwin was sent away from the institution for elders (Sunset Manor) and is addicted in heroin. When her seven-year-old daughter Olive has a chance to dispute the Little Miss Sunshine pageant in Redondo Beach, California, the whole family travels together in their old Volkswagen Type 2.</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Released</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 id="detailYear2">2006</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Genres</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 id="detailGenre2">Comedy | Drama</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <h5 class="cGras">Price</h5>
-                                            </div>
-                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                                <h5 class="cGras" id="detailPrice2">14,00 €</h5>
-                                            </div>
-                                        </div>
-        							</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modals MOTHER -->
+  <div class="modal fade" id="modalMother" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Mother!</h4>
+        </div>
+        <div class="modal-body">
+          <h5>2017 Drama/Thriller/Mystery by Darren Aronofsky</h5>
+          <p>Stars : Jennifer Lawrence, Javier Bardem, Ed Harris, Michelle Pfeiffer...</p>
+          <p>Amidst a wild flat meadow encircled by an Edenic lush forest, a couple have cocooned themselves in a secluded mansion that was not so long ago burned to the ground, devotedly restored by the supportive wife. Within this safe environment, the
+            once famous middle-aged poet husband is desirous of creating his magnum opus; however, he seems unable to break out of the persistent creative rut that haunts him. Then, unexpectedly, a knock at the door, the sudden arrival of a cryptic late-night
+            visitor and his intrusive wife will stimulate the writer's stagnant imagination. Little by little, much to the perplexed wife's surprise, the more chaos he lets in their haven, the better for his punctured male ego. In the end, will this incremental
+            mess blemish, irreparably, the couple's inviolable sanctuary?</p>
+        </div>
+        <div class="modal-trailer">
+          <iframe id="vidMother" width="560" height="315" src="https://www.youtube.com/embed/XpICoc65uh0"></iframe>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <!-- Modals BORAT -->
+  <div class="modal fade" id="modalBorat" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan</h4>
+        </div>
+        <div class="modal-body">
+          <h5>2006 Comedy by Larry Charles</h5>
+          <p>Stars : Sacha Baron Cohen, Ken Davitian...</p>
+          <p>Borat Sagdiyev is a TV reporter of a popular show in Kazakhstan as Kazakhstan's sixth most famous man and a leading journalist. He is sent from his home to America by his government to make a documentary about American society and culture. Borat
+            takes a course in New York City to understand American humor. While watching Baywatch on TV, Borat discovers how beautiful their women are in the form of C. J. Parker, who was played by actress Pamela Anderson who hails from Malibu, California.
+            He decides to go on a cross-country road trip to California in a quest to make her his wife and take her back to his country. On his journey Borat and his producer encounter a country full of strange and wonderful Americans, real people in
+            real chaotic situations with hysterical consequences.</p>
+        </div>
+        <div class="modal-trailer">
+          <iframe id="vidBorat" width="560" height="315" src="https://www.youtube.com/embed/vlnUa_dNsRQ"></iframe>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <!-- Modals BLOOD -->
+  <div class="modal fade" id="modalBlood" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">There Will Be Blood</h4>
+        </div>
+        <div class="modal-body">
+          <h5>2007 Drama by Paul Thomas Anderson</h5>
+          <p>Stars : Wil Daniel Day-Lewis, Paul Dano, Ciarán Hinds, Dillon Freasier...</p>
+          <p>The intersecting life stories of Daniel Plainview and Eli Sunday in early twentieth century California presents miner-turned-oilman Daniel Plainview, a driven man who will do whatever it takes to achieve his goals. He works hard but also takes
+            advantage of those around him at their expense if need be. His business partner/son (H.W.) is, in reality, an "acquired" child whose true biological single-parent father (working on one of Daniel's rigs) died in a workplace accident. Daniel
+            is deeply protective of H.W. if only for what H.W. brings to the partnership. Eli Sunday is one in a pair of twins whose family farm Daniel purchases for the major oil deposit located on it. Eli, a local preacher and a self-proclaimed faith
+            healer, wants the money from the sale of the property to finance his own church.</p>
+        </div>
+        <div class="modal-trailer">
+          <iframe id="vidBlood" width="560" height="315" src="https://www.youtube.com/embed/FeSLPELpMeM"></iframe>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <br><br>
+  <!-- FEATURED MOVIES -->
+  <section id="featuredMovies" class="feature_movies">
+    <div class="container">
+      <h3>FEATURED MOVIES</h3>
+      <div class="filtres">
+        <button class="filtre_active" onclick="filterMovAll()">All</button>
+        <button id="showComedy" onclick="filterMovComedy()">Comedy</button>
+        <button id="showDrama" onclick="filterMovDrama()">Drama</button>
+        <button id="showAdventure" onclick="filterMovAdventure() ">Adventure</button>
+        <button id="showThriller" onclick="filterMovThriller() ">Thriller</button>
+        <button id="showFantasy" onclick="filterMovFantasy() ">Fantasy</button>
+        <button id="showSciFi" onclick="filterMovSciFi() ">Sci-Fi</button>
+      </div>
+
+      <div class="container feature_movies_container">
+        <div class="row">
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_memento.jpg" alt="">
+              <div class="caption">
+                <h5>Memento</h5>
+                <p>2000</p>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_elly.jpg" alt="">
+              <div class="caption">
+                <h5>Darbareye Elly</h5>
+                <p>2009</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 SciFi Thriller">
+            <div class="thumbnail">
+              <img src="assets/img/poster_alien.jpg" alt="">
+              <div class="caption">
+                <h5>Alien</h5>
+                <p>1979</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/poster_sunshine.jpg" alt="">
+              <div class="caption">
+                <h5>Little Miss Sunshine</h5>
+                <p>2006</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller SciFi">
+            <div class="thumbnail">
+              <img src="assets/img/poster_triangle.jpg" alt="">
+              <div class="caption">
+                <h5>Triangle</h5>
+                <p>2009</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/poster_strangelove.jpg" alt="">
+              <div class="caption">
+                <h5>Dr Strangelove</h5>
+                <p>1964</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_revenant.jpg" alt="">
+              <div class="caption">
+                <h5>The Revenant</h5>
+                <p>2015</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller">
+            <div class="thumbnail">
+              <img src="assets/img/poster_reservoir.jpg" alt="">
+              <div class="caption">
+                <h5>Reservoir Dogs</h5>
+                <p>1992</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Drama Thriller">
+            <div class="thumbnail">
+              <img src="assets/img/poster_pan.jpg" alt="">
+              <div class="caption">
+                <h5>Pan's Labyrinth</h5>
+                <p>2006</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_nobody.jpg" alt="">
+              <div class="caption">
+                <h5>Mr Nobody</h5>
+                <p>2009</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_memories.jpg" alt="">
+              <div class="caption">
+                <h5>Salinui chueok</h5>
+                <p>2003</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/poster_malkovitch.jpg" alt="">
+              <div class="caption">
+                <h5>Being John Malkovitch</h5>
+                <p>1999</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/poster_lebowski.jpg" alt="">
+              <div class="caption">
+                <h5>The Big Lebowski</h5>
+                <p>1998</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_lavita.jpg" alt="">
+              <div class="caption">
+                <h5>La Vita E Bella</h5>
+                <p>1997</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_jagten.jpg" alt="">
+              <div class="caption">
+                <h5>Jagten</h5>
+                <p>2012</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/poster_groundhog.jpg" alt="">
+              <div class="caption">
+                <h5>Groundhog Day</h5>
+                <p>1993</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/poster_borat.jpg" alt="">
+              <div class="caption">
+                <h5>Borat</h5>
+                <p>2006</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Thriller SciFi">
+            <div class="thumbnail">
+              <img src="assets/img/poster_donnie.jpg" alt="">
+              <div class="caption">
+                <h5>Donnie Darko</h5>
+                <p>2001</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_dasboot.jpg" alt="">
+              <div class="caption">
+                <h5>Das Boot</h5>
+                <p>1981</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_cidade.jpg" alt="">
+              <div class="caption">
+                <h5>Cidade De Deus</h5>
+                <p>2002</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 SciFi Thriller">
+            <div class="thumbnail">
+              <img src="assets/img/poster_chrono.jpg" alt="">
+              <div class="caption">
+                <h5>Los Cronocrimenes</h5>
+                <p>2007</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Fantasy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_chihiro.jpg" alt="">
+              <div class="caption">
+                <h5>Spirited Away</h5>
+                <p>2001</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_captain.jpg" alt="">
+              <div class="caption">
+                <h5>Captain Fantastic</h5>
+                <p>2016</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 SciFi Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_blade.jpg" alt="">
+              <div class="caption">
+                <h5>Blade Runner 2049</h5>
+                <p>2017</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_beauty.jpg" alt="">
+              <div class="caption">
+                <h5>American Beauty</h5>
+                <p>1999</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 SciFi Fantasy Adventure">
+            <div class="thumbnail">
+              <img src="assets/img/poster_avatar.jpg" alt="">
+              <div class="caption">
+                <h5>Avatar</h5>
+                <p>2009</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_therewillbeblood.jpg" alt="">
+              <div class="caption">
+                <h5>There Will Be Blood</h5>
+                <p>2007</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_standbyme.jpg" alt="">
+              <div class="caption">
+                <h5>Stand By Me</h5>
+                <p>1986</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_mother.jpg" alt="">
+              <div class="caption">
+                <h5>Mother!</h5>
+                <p>2017</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Fantasy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/poster_lifeofpi.jpg" alt="">
+              <div class="caption">
+                <h5>Life Of Pi</h5>
+                <p>2012</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-btn-wrapper">
+        <button id="numFeatMovs" onclick="toggleMovies()">Show more</button>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
+  <br>
+  <!-- FEATURED SERIES -->
+  <section id="featuredSeries" class="feature_series">
+    <div class="container">
+      <h3>FEATURED SERIES</h3>
+      <div class="filtres">
+        <button class="filtre_active" onclick="filterSeriesAll()">All</button>
+        <button id="viewComedy" onclick="filterSeriesComedy()">Comedy</button>
+        <button id="viewDrama" onclick="filterSeriesDrama()">Drama</button>
+        <button id="viewAdventure" onclick="filterSeriesAdventure()">Adventure</button>
+        <button id="viewThriller" onclick="filterSeriesThriller()">Thriller</button>
+        <button id="viewFantasy" onclick="filterSeriesFantasy()">Fantasy</button>
+        <button id="viewSciFi" onclick="filterSeriesSciFi()">Sci-Fi</button>
+      </div>
+
+      <div class="container feature_series_container">
+        <div class="row">
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_breaking.jpg" alt="">
+              <div class="caption">
+                <h5>Breaking Bad</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_cards.jpg" alt="">
+              <div class="caption">
+                <h5>House Of Cards</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_dekalog.jpg" alt="">
+              <div class="caption">
+                <h5>Dekalog</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama Fantasy SciFi">
+            <div class="thumbnail">
+              <img src="assets/img/series_leftovers.jpg" alt="">
+              <div class="caption">
+                <h5>The Leftovers</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 SciFi Drama Thriller">
+            <div class="thumbnail">
+              <img src="assets/img/series_mirror.jpg" alt="">
+              <div class="caption">
+                <h5>Black Mirror</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama Thriller">
+            <div class="thumbnail">
+              <img src="assets/img/series_narcos.jpg" alt="">
+              <div class="caption">
+                <h5>Narcos</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_rome.jpg" alt="">
+              <div class="caption">
+                <h5>Rome</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_wire.jpg" alt="">
+              <div class="caption">
+                <h5>The Wire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/series_curb.jpg" alt="">
+              <div class="caption">
+                <h5>Curb Your Enthusiasm</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/series_crowd.jpg" alt="">
+              <div class="caption">
+                <h5>The IT Crowd</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_deadwood.jpg" alt="">
+              <div class="caption">
+                <h5>Deadwood</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_downton.jpg" alt="">
+              <div class="caption">
+                <h5>Downton Abbey</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Comedy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_fargo.jpg" alt="">
+              <div class="caption">
+                <h5>Fargo</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Adventure">
+            <div class="thumbnail">
+              <img src="assets/img/series_got.jpg" alt="">
+              <div class="caption">
+                <h5>Game Of Thrones</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_knick.jpg" alt="">
+              <div class="caption">
+                <h5>The Knick</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_night.jpg" alt="">
+              <div class="caption">
+                <h5>The Night Of</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/series_office.jpg" alt="">
+              <div class="caption">
+                <h5>The Office</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_ray.jpg" alt="">
+              <div class="caption">
+                <h5>Ray Donovan</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Adventure SciFi Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/series_rick.jpg" alt="">
+              <div class="caption">
+                <h5>Rick & Morty</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_robot.jpg" alt="">
+              <div class="caption">
+                <h5>Mr Robot</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_saul.jpg" alt="">
+              <div class="caption">
+                <h5>Better Call Saul</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/series_thick.jpg" alt="">
+              <div class="caption">
+                <h5>The Thick Of It</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Fantasy Thriller Drama">
+            <div class="thumbnail">
+              <img src="assets/img/series_twin.jpg" alt="">
+              <div class="caption">
+                <h5>Twin Peaks</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3 col-md-2 Comedy">
+            <div class="thumbnail">
+              <img src="assets/img/series_wonderfall.jpg" alt="">
+              <div class="caption">
+                <h5>Wonderfall</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-btn-wrapper">
+        <button id="numFeatSeries" onclick="toggleSeries()">Show more</button>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
+
+  <br>
+  <!-- MOVIE SHOP -->
+  <section id="movieShop" class="shop_movies">
+    <div class="container">
+      <h3>MOVIE SHOP</h3>
+      <div id="shopCarousel" class="carousel slide" data-interval="false">
+        <!-- arrows -->
+        <div class="arrowWrap">
+          <a class="arrowBox" href="#shopCarousel" data-slide="prev"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>
+          <a class="arrowBox" href="#shopCarousel" data-slide="next"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a>
+        </div>
+        <!-- THE SLIDES -->
+        <div class="carousel-inner">
+          <!-- slide -->
+          <div class="item active">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- THUMBS SLIDE 1 -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 thumbs">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_alien.jpg" alt="Alien"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Alien</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>1979</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>15,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_standbyme.jpg" alt="Stand By Me"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Stand By Me</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>1986</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>12,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_memento.jpg" alt="Memento"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Memento</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2000</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>17,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_triangle.jpg" alt="Triangle"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Triangle</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2007</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>12,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_reservoir.jpg" alt="Reservoir Dogs"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Reservoir Dogs</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>1992</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>13,50 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_donnie.jpg" alt="Donnie Darko"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Donnie Darko</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2001</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>12,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_avatar.jpg" alt="Avatar"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Avatar</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2009</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>22,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_jagten.jpg" alt="Jagten"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Jagten</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2012</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>18,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- DETAIL SLIDE 1 -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 detail">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <span id="detailVid"><iframe id="movShopVid1" class="embed-responsive-item" src="https://www.youtube.com/embed/jQ5lPt9edzQ"></iframe></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <h4 class="cRouge" id="detailTitle">ALIEN</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Storyline</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 id="detailStory">In the distant future, the crew of the commercial spaceship Nostromo are on their way home when they pick up a distress call from a distant moon. The crew are under obligation to investigate and the spaceship descends on the moon afterwards. After a rough landing, three crew members leave the spaceship to explore the area on the moon. At the same time as they discover a hive colony of some unknown creature, the ship's computer deciphers the message to be a warning, not a distress call.</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Released</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 id="detailYear">1979</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Genres</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 id="detailGenre">Horror | Sci-Fi</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Price</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 class="cGras" id="detailPrice">15,00 €</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class="item">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- THUMBS SLIDE 2 -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 thumbs">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_sunshine.jpg" alt="Alien"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Little Miss Sunshine</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2006</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>14,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_elly.jpg" alt="Stand By Me"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Darbareye Elly</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2009</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>11,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_dasboot.jpg" alt="Memento"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Das Boot</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>1981</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>8,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_chihiro.jpg" alt="Triangle"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Spirited Away</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2001</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>10,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_beauty.jpg" alt="Reservoir Dogs"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">American Beauty</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>1999</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>10,50 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_mother.jpg" alt="Donnie Darko"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Mother!</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2017</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>19,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_lifeofpi.jpg" alt="Avatar"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">Lif Of Pi</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>2012</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>16,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pouce">
+                      <div class="thumbnail">
+                        <a href="#movieShop"><img class="shopImg" src="assets/img/poster_lavita.jpg" alt="Jagten"></a>
+                      </div>
+                      <div class="caption-container">
+                        <p id="titreFilm">La Vita E Bella</p>
+                        <div class="row">
+                          <div class="col-md-3 aleft">
+                            <p>1997</p>
+                          </div>
+                          <div class="col-md-9 aright">
+                            <p>11,00 €</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- DETAIL SLIDE 2 -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 detail">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <span id="detailVid2"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wvwVkllXT80"></iframe></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <h4 class="cRouge" id="detailTitle2">LITTLE MISS SUNSHINE</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Storyline</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 id="detailStory2">In Albuquerque, Sheryl Hoover brings her suicidal brother Frank to the breast of her dysfunctional and emotionally bankrupted family. Frank is homosexual, an expert in Proust. He tried to commit suicide when he was rejected by his boyfriend and his great competitor became renowned and recognized as number one in the field of Proust. Sheryl's husband Richard is unsuccessfully trying to sell his self-help and self-improvement technique using nine steps to reach success, but he is actually a complete loser. Her son Dwayne has taken a vow of silence as a follower of Nietzsche and aims to be a jet pilot. Dwayne's grandfather Edwin was sent away from the institution for elders (Sunset Manor) and is addicted in heroin. When her seven-year-old daughter Olive has a chance to dispute the Little Miss Sunshine pageant in Redondo Beach, California, the whole family travels together in their old Volkswagen Type 2.</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Released</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 id="detailYear2">2006</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Genres</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 id="detailGenre2">Comedy | Drama</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                      <h5 class="cGras">Price</h5>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                      <h5 class="cGras" id="detailPrice2">14,00 €</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
 
 
-        <br><br>
-        <!-- FOOTER -->
-        <footer class="footer">
+  <br><br>
+  <!-- FOOTER -->
+  <footer class="footer">
 
-        </footer>
+  </footer>
 
 
 
-        <script src="https://use.fontawesome.com/be3ae42918.js"></script>
-        <script type="text/javascript" src="assets/js/acceptation.cookie.js"></script>
-        <script type="text/javascript" src="assets/js/videoStop.js"></script>
-        <script type="text/javascript" src="assets/js/shop.js"></script>
-        <script type="text/javascript" src="assets/js/wwidth.js"></script>
-        <script type="text/javascript" src="assets/js/filters.js"></script>
-        <script type="text/javascript" src="assets/js/filtersBis.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
-        <script type="text/javascript" src="assets/js/18.js"></script>
+  <script src="https://use.fontawesome.com/be3ae42918.js"></script>
+  <script type="text/javascript" src="assets/js/acceptation.cookie.js"></script>
+  <script type="text/javascript" src="assets/js/videoStop.js"></script>
+  <script type="text/javascript" src="assets/js/shop.js"></script>
+  <script type="text/javascript" src="assets/js/wwidth.js"></script>
+  <script type="text/javascript" src="assets/js/filters.js"></script>
+  <script type="text/javascript" src="assets/js/filtersBis.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="assets/js/18.js"></script>
 
-    </body>
+</body>
+
 </html>
