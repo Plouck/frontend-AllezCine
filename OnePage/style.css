@@ -50,9 +50,6 @@ body{
     color: #ffffff;
     background-color: #DF2620;
 }
-.navbar-nav {
-    font-size: 14px !important;
-}
 .nodrop {
     text-shadow: 1px 1px 2px black;
 }
@@ -145,10 +142,21 @@ ol.carousel-indicators {
     margin: 10px !important;
 }
 
+/* RED BANNER */
 .redBan{
-    height: 37px;
     width: 100%;
     background-color: #DF2620;
+    text-align: left;
+}
+.redBan .pb-modalreglog-submit{
+    border:none;
+    background-color: #181818;
+    padding: 6px;
+    margin-right: 10px;
+    color: white;
+    min-width: 80px;
+    margin-bottom: 7px;
+    margin-top: 6px;
 }
 
 /* FILMS */
@@ -432,7 +440,7 @@ section h3{
     color: white;
     min-width: 80px;
 }
-.footer h2{
+.footer #subFrow h2{
     color: #DF2620;
 }
 .footer h4{
@@ -473,6 +481,32 @@ section h3{
 .footer .vidStart img{
     opacity: 0.5;
     filter: alpha(opacity=50);
+}
+.footer #socialFrow{
+    text-align: center;
+}
+.footer #socialFrow h4{
+    color: #615c5c;
+}
+footer #socialFrow ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding-right: 37px;
+}
+footer #socialFrow li{
+    list-style-type: none;
+    padding: 6px;
+    color: #615c5c;
+    border: 2px solid #615c5c;
+    margin: 0 6px;
+    min-width: 40px;
+    font-size: 16px;
+}
+footer #socialFrow li:hover{
+    color: #DF2620;
+    border: 2px solid #DF2620;
 }
 
 

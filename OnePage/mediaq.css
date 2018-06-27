@@ -1,4 +1,7 @@
 @media(max-width:767px){
+    .navbar-nav {
+        font-size: 14px !important;
+    }
     .navbar-inverse {
         background-color: #333333;
         border-color: black !important;
@@ -33,6 +36,9 @@
     }
 }
 @media(min-width:768px){
+    .navbar-nav {
+        font-size: 14px !important;
+    }
     .feat{
         display: none;
     }
@@ -63,6 +69,9 @@
     }
 }
 @media(min-width:992px){
+    .navbar-nav {
+        font-size: 16px !important;
+    }
     .feat{
         display: none;
     }
@@ -90,6 +99,9 @@
     }
 }
 @media(min-width:1200px){
+    .navbar-nav {
+        font-size: 17px !important;
+    }
     .feat{
         display: inline;
     }
