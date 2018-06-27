@@ -521,7 +521,7 @@ footer #socialFrow li:hover{
   left: 0;
   right: 0;
   z-index: 9000;
-  background-color: rgba(#DF2620, 0.7);
+  background-color: rgba(32,23,19,.8);
   transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
 }
 #ageWrapper.ageUnknown {
@@ -537,18 +537,19 @@ footer #socialFrow li:hover{
   padding: 30px;
   width: 360px;
   height: 150px;
-  margin-top: -160px;
+  margin-top: -105px;
   margin-left: -185px;
   box-sizing: border-box;
 }
 #agePopUp a {
-  background-color: #DF2620;
+  background-color: black;
   color: white;
   padding: 10px 20px;
-  margin: 10px;
-  min-width: 80px;
+  margin-top: 10px;
   display: inline-block;
 }
+
+
 
 
 /* cookie eu */
@@ -577,7 +578,6 @@ div.cookie_policy_msg>div>a:last-child{
   width:32px;
   color:#fff;
 }
-
 
 /* LE BOUTON DE LA MORT! */
 .canvas{
