@@ -23,7 +23,8 @@ jQuery(document).ready(function() {
         jQuery("#day").val() ? day = jQuery("#day").val() : day = 'notset';
         jQuery("#month").val() ? month = jQuery("#month").val() : month = 'notset';
         jQuery("#year").val() ? year = jQuery("#year").val() : year = 'notset';
-        age = jQuery("#location").val();
+        //age = jQuery("#location").val();
+        age = 18;
         jQuery("#remember").is(':checked') ? remember = 'checked' : remember = false;
 
         mydate = new Date();
