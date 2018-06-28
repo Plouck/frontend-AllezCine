@@ -57,6 +57,8 @@ function filterMovFantasy(){
             allMovs[i].style.display = "none";
         }
     }
+    $('.feature_movies .filtres button').not('#showFantasy').removeClass('filtre_active');
+    $('#showFantasy').toggleClass('filtre_active');
 }
 
 function filterMovSciFi(){
@@ -71,6 +73,8 @@ function filterMovSciFi(){
             allMovs[i].style.display = "none";
         }
     }
+    $('.feature_movies .filtres button').not('#showSciFi').removeClass('filtre_active');
+    $('#showSciFi').toggleClass('filtre_active');
 }
 
 function filterMovDrama(){
@@ -85,6 +89,8 @@ function filterMovDrama(){
             allMovs[i].style.display = "none";
         }
     }
+    $('.feature_movies .filtres button').not('#showDrama').removeClass('filtre_active');
+    $('#showDrama').toggleClass('filtre_active');
 }
 
 function filterMovComedy(){
@@ -99,6 +105,8 @@ function filterMovComedy(){
             allMovs[i].style.display = "none";
         }
     }
+    $('.feature_movies .filtres button').not('#showComedy').removeClass('filtre_active');
+    $('#showComedy').toggleClass('filtre_active');
 }
 
 function filterMovAdventure(){
@@ -113,6 +121,8 @@ function filterMovAdventure(){
             allMovs[i].style.display = "none";
         }
     }
+    $('.feature_movies .filtres button').not('#showAdventure').removeClass('filtre_active');
+    $('#showAdventure').toggleClass('filtre_active');
 }
 
 function filterMovThriller(){
@@ -127,4 +137,6 @@ function filterMovThriller(){
             allMovs[i].style.display = "none";
         }
     }
+    $('.feature_movies .filtres button').not('#showThriller').removeClass('filtre_active');
+    $('#showThriller').toggleClass('filtre_active');
 }
