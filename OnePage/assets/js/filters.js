@@ -1,10 +1,10 @@
 
-$(function() {
-    var $button = $('.feature_movies .filtres button').click(function() {
-      $button.not(this).removeClass('filtre_active');
-      $(this).toggleClass('filtre_active');
-    });
-  });
+// $(function() {
+//     var $button = $('.feature_movies .filtres button').click(function() {
+//       $button.not(this).removeClass('filtre_active');
+//       $(this).toggleClass('filtre_active');
+//     });
+//   });
 
 var numFeatMovs = document.getElementById("numFeatMovs");
 var twelveMovs = document.querySelectorAll(".feature_movies_container .row > div:nth-last-child(-n + 18)");
