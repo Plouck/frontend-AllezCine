@@ -1,16 +1,24 @@
 # Travail Intégration : AllezCiné
 
-- Repository : `frontend-AllezCine`
-- Temps nécessaire : 2 semaines
-- Deadline : vendredi 29/06 à 17:00
-- Equipe de 2 : Eric Lavachery & Hakan Poyraz
+Projet à deux dans le cadre de la formation de BeCode d'un "OnePage" ( via un layout et des consignes ) et d'une newsletter.
 
+## Lien des consignes.
 
-## Objectifs d'apprentissage
-- respecter un design fourni
-- consolider les acquis en git, HTML, CSS, Bootstrap
-- utiliser javascript et jQuery dans un projet réaliste
-- avoir un nouveau projet à ajouter à son portfolio
+https://github.com/becodeorg/Johnson2/tree/master/projets/AllezCine
 
+### Langages utilisés ?
 
+* HTML5
+* Css3
+* JavaScript
+* jQuery
+* Bootstrap
 
+### Responsive ?
+
+OUI !
+
+## Auteur(s)
+
+* Eric Lavachery
+* Hakan Poyraz
