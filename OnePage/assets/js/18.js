@@ -40,6 +40,7 @@ jQuery(document).ready(function() {
             return false;
         } else if ((currdate - mydate) < 0) {
             alert("Sorry, only persons over the age of " + age + " may enter this site");
+            location.href="https://www.imdb.com/"
             return false;
         } else {
             if (remember) {
