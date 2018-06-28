@@ -158,6 +158,24 @@ ol.carousel-indicators {
     margin-bottom: 7px;
     margin-top: 6px;
 }
+#numTel{
+    color: #e7bdbc;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+#numTel #theNum{
+    font-family: arial;
+}
+.logreg{
+    border:none;
+    background-color: #DF2620;
+    padding: 8px;
+    margin-right: 10px;
+    color: white;
+    min-width: 80px;
+    margin-bottom: 10px;
+}
 
 /* FILMS */
 .thumbnail{
